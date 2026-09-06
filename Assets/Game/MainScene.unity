@@ -814,18 +814,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1055685235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c442f0762de2a46ae7e10d8cb0d5a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c2fb11855806b64fb92ed71dd1cfcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healtcomponent:
+    MaxHealth: 3
   speed: 2
-  prefab: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}
+  bulletPrefab: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}
   bomb: {fileID: 0}
   power: 1
   reach: 1
   duration: 1
   stability: 1
   SellectedBuild: 0
-  bullet: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}
 --- !u!1 &1126387381
 GameObject:
   m_ObjectHideFlags: 0
