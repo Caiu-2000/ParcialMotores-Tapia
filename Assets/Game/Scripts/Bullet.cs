@@ -63,3 +63,11 @@ public class Bullet : MonoBehaviour , IPoolable
     }
 
 }
+
+public enum SoundTypes
+{
+    menu,
+    Start,
+    Death
+
+}
