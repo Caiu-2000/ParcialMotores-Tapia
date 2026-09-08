@@ -5,6 +5,9 @@ public class Gamemanager : MonoBehaviour
 {
     public Gamemanager instance { get; private set; }
 
+
+    [SerializeField]
+    public Sprite DefaultTexture;
     void Start()
     {
         if (instance == null)
@@ -22,4 +25,11 @@ public class Gamemanager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+}
+
+
+public enum Characters
+{
+    Davo,
+    Cobra
 }
