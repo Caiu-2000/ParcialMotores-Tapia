@@ -41,6 +41,8 @@ public class SelectionManager : MonoBehaviour
         Reach.text = Characters[selected].Alcance.ToString();
         Duration.text = Characters[selected].Duracion.ToString();
         Estability.text = Characters[selected].Estabilidad.ToString();
+
+
     }
     
     public void UpdateFace()
