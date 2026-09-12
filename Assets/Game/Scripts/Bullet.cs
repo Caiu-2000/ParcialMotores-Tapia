@@ -8,6 +8,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour , IPoolable
 {
     [SerializeField] Sprite[] sprites;
+    [SerializeField] Sprite[] SpecialSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     protected Entity who;
@@ -19,10 +20,12 @@ public class Bullet : MonoBehaviour , IPoolable
         StartCoroutine(DeleteTime());
     }
  
-    public void RestartBullet(Entity who ,bool variation = false)
+    public void RestartBullet(Entity who ,bool variation = false , bool special = false)
     {
         this.who = who;
-        spriteRenderer.sprite = variation ? sprites[0] : sprites[1];
+        if (!special)
+            spriteRenderer.sprite = variation ? sprites[0] : sprites[1];
+        else{ spriteRenderer.sprite = variation ? SpecialSprite[0] : SpecialSprite[1]; }
     }
 
     public void ReturnToPool(Action<IPoolable> returnaction)

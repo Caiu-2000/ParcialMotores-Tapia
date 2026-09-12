@@ -36,7 +36,7 @@ public abstract class Pool <T> where T : Component , IPoolable
     }
     public virtual void ReturnPoolable(T obj)
     {
-        Debug.Log("Se llamo return");
+     
         poolStack.Push(obj);
     }
     protected T Create()

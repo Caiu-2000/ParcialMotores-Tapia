@@ -10,7 +10,7 @@ public class JoyController : MonoBehaviour,  IDragHandler , IBeginDragHandler, I
 
     Vector2 BeguinPosition;
 
-    [SerializeField] Player _cobra;
+   Player character;
     private bool _dragging = false;
     Vector2 direction;
 
@@ -29,7 +29,7 @@ public class JoyController : MonoBehaviour,  IDragHandler , IBeginDragHandler, I
     {
         transform.position = eventData.position;
         direction = (eventData.position - BeguinPosition).normalized;
-        _cobra.Move(direction);
+        character.Move(direction);
         
     }
 
@@ -42,6 +42,12 @@ public class JoyController : MonoBehaviour,  IDragHandler , IBeginDragHandler, I
 
     private void Update()
     {
-        if (_dragging) { _cobra.Move(direction); }
+        if (_dragging) { character.Move(direction); }
+    }
+
+    public void SetPlayer(Player player)
+    {
+        print("Se mando player");
+        character = player;
     }
 }
