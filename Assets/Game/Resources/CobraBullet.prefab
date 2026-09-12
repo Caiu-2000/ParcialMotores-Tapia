@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4776299521080751060}
   - component: {fileID: 7321329521365527132}
   m_Layer: 0
-  m_Name: PlayerBullet
+  m_Name: CobraBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,8 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 108c0a4d7af260545944995e66a810c3, type: 3}
-  - {fileID: 21300000, guid: 715465be311b7004bafef239dbf130b5, type: 3}
+  - {fileID: -7026240478331550470, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: -4836669311847700956, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  SpecialSprite:
+  - {fileID: -4678728812461677680, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: -264256235, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   spriteRenderer: {fileID: 6236682518851184272}
 --- !u!58 &7321329521365527132
 CircleCollider2D:

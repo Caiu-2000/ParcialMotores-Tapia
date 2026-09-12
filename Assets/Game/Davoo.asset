@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54a380d1c9b155c42981b2e83df9b755, type: 3}
-  m_Name: Cobra
+  m_Name: Davoo
   m_EditorClassIdentifier: 
-  Name: Cobra
-  SpecialDescription: x2 de aura
+  Name: Davoo
+  SpecialDescription: "Hitbox Peque\xF1a"
   dificultySprites:
-  - {fileID: 2844007018818766081, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
-  - {fileID: 5849544522290482525, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
-  - {fileID: 2173239620405203007, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
-  Power: 0
-  Alcance: 1
+  - {fileID: -4259082810035160237, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: 1709242585662161586, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: -7930348341391806515, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  Power: 2
+  Alcance: 0
   Duracion: 1
-  Estabilidad: 2
+  Estabilidad: 0
   BulletsExample: {fileID: 21300000, guid: 573525812432fc14dae6459474b448d0, type: 3}
   bullet: {fileID: 0}
   bomb: {fileID: 0}

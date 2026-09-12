@@ -1,13 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Gamemanager : MonoBehaviour
 {
-    public Gamemanager instance { get; private set; }
+    public static Gamemanager instance { get; private set; }
 
 
     [SerializeField]
     public Sprite DefaultTexture;
+
+
+
+    public Player[] CharactersList = new Player[1];
+
     void Start()
     {
         if (instance == null)
@@ -28,8 +34,9 @@ public class Gamemanager : MonoBehaviour
 }
 
 
-public enum Characters
+public enum CharacterNames
 {
-    Davo,
-    Cobra
+    Cobra,
+    Davo
+    
 }
