@@ -53,7 +53,7 @@ public class Player : Entity
         while (true)
         {
             Bullet bullet = bulletPool.GetPrefab();
-            bullet.RestartBullet(this , switchbullet);
+            bullet.RestartBullet(this , switchbullet , Buffed);
             bullet.Spawned(this.transform.position);
             switchbullet = !switchbullet;
             yield return new WaitForSeconds(0.25f);
@@ -64,9 +64,9 @@ public class Player : Entity
     {
 
     }
-    public void BuffPlayer()
+    public void BuffPlayer(float buffDuration = 2.0f)
     {
-
+        StartCoroutine(BuffRoutine(buffDuration));
     }
     private IEnumerator BuffRoutine(float Bufftime)
     {
@@ -88,26 +88,4 @@ public class Player : Entity
         else characterRenderer.sprite = BaseSprite;
     } 
 
-}
-
-public abstract class Collectable : MonoBehaviour
-{
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (TryGetComponent<Player>(out Player player))
-        {
-            applySelf(player);
-        }
-    }
-    public abstract void applySelf(Player player);
-
-
-}
-public class BuffCollectable : Collectable
-{
-    public override void applySelf(Player player)
-    {
-        throw new System.NotImplementedException();
-    }
 }

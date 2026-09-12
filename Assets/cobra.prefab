@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4870111390713354314}
   - component: {fileID: 4801420598363690145}
+  - component: {fileID: 6466160327433668974}
   m_Layer: 0
   m_Name: cobra
   m_TagString: Untagged
@@ -148,3 +149,39 @@ MonoBehaviour:
   InvincibleSprite: {fileID: 3143922356029946234, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   BuffedSprite: {fileID: -4232531709621455174, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   characterRenderer: {fileID: 3397698527771446454}
+--- !u!58 &6466160327433668974
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600341929318637163}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
