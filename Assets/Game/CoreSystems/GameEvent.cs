@@ -15,7 +15,9 @@ public enum GameEvent
     HealPlayer,
     DamagePlayer,
     
-    GameStateChanged
+    GameStateChanged,
+
+    BombTroued
 
 }
 

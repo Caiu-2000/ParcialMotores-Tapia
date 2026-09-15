@@ -1,6 +1,6 @@
 
 using System.Collections;
-using System.Runtime.CompilerServices;
+
 using UnityEngine;
 
 
@@ -28,6 +28,8 @@ public class Player : Entity
     [SerializeField] Sprite InvincibleSprite;
     [SerializeField] Sprite BuffedSprite;
 
+    [SerializeField] int PoolSize = 1;
+
     [SerializeField] SpriteRenderer characterRenderer;
     protected BulletPool bulletPool;
 
@@ -43,7 +45,7 @@ public class Player : Entity
     }
     private void Start()
     {
-        bulletPool = new BulletPool(bulletPrefab, 1);
+        bulletPool = new BulletPool(bulletPrefab, PoolSize);
         StartCoroutine(FireRutine());
         
     }
