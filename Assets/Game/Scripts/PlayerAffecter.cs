@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public abstract class Collectable : MonoBehaviour
+public abstract class PlayerAffecter : MonoBehaviour
 {
-    [SerializeField] private float radius = 0.25f;
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (TryGetComponent<Player>(out Player player))
         {
             applySelf(player);
+            Destroy(this.gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,7 @@ public abstract class Collectable : MonoBehaviour
         if (collision.TryGetComponent<Player>(out Player player))
         {
             applySelf(player);
+            Destroy(this.gameObject);
         }
     }
     public abstract void applySelf(Player player);

@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour , IPoolable
     protected System.Action<IPoolable> returnAction;
     public void Spawned(Vector3 position)
     {
-        
+        transform.rotation = Quaternion.identity;
         transform.position = position;
         StartCoroutine(DeleteTime());
     }
@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour , IPoolable
 
     private void Update()
     {
-        transform.position += Vector3.up * 5.0f * Time.deltaTime;
+        transform.position += transform.up * 5.0f * Time.deltaTime;
     }
 
 

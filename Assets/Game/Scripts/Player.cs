@@ -1,14 +1,12 @@
 
 using System.Collections;
-
 using UnityEngine;
-
 
 public class Player : Entity
 {
     [SerializeField] float speed = 2.0f;
     [SerializeField] Bullet bulletPrefab;
-    [SerializeField] Bullet SpecialBulletPreffab;
+ 
     
     
 
@@ -22,7 +20,7 @@ public class Player : Entity
     [SerializeField] protected IPasive pasive;
 
 
-    [SerializeField] protected Collectable collectable;
+    
 
     [SerializeField] protected Sprite BaseSprite;
     [SerializeField] Sprite InvincibleSprite;
@@ -32,7 +30,7 @@ public class Player : Entity
 
     [SerializeField] SpriteRenderer characterRenderer;
     protected BulletPool bulletPool;
-
+    protected int bombCuantity = 3;
     public bool Buffed { private set; get; } = false;
     public bool invincible { private set; get; } = false;
 
@@ -47,7 +45,10 @@ public class Player : Entity
     {
         bulletPool = new BulletPool(bulletPrefab, PoolSize);
         StartCoroutine(FireRutine());
-        
+        EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
+        EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
+        healtcomponent.onDead += deadHandling;
+
     }
     private IEnumerator FireRutine()
     {
@@ -62,9 +63,17 @@ public class Player : Entity
         }
     }
 
-    public void LaunchBomb()
+    // Con el eventmanager no se poner eventos sin valores asi que queda con variable x solo para poder pasar. Por eso no se usa
+    public void LaunchBomb(int x)
     {
-
+        
+        if (bombCuantity > 0) 
+        {
+            bombCuantity -= 1;
+            EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
+            StartCoroutine(InvincibleTime(1.0f));
+            bomb.Activate(); 
+        }
     }
     public void BuffPlayer(float buffDuration = 2.0f)
     {
@@ -88,6 +97,28 @@ public class Player : Entity
         if (invincible) characterRenderer.sprite = InvincibleSprite;
         else if (Buffed) characterRenderer.sprite = BuffedSprite;
         else characterRenderer.sprite = BaseSprite;
-    } 
+    }
+    public override void OnHit(DamageData data)
+    {
+        if (invincible) return;
+        base.OnHit(data);
+        EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
+    }
 
+    public BulletPool getPool() => bulletPool;
+
+
+    private void OnEnable()
+    {
+        EventManager<InputEvents>.Subscribe<int>(InputEvents.BombPressed, LaunchBomb);
+    }
+    private void OnDisable()
+    {
+        EventManager<InputEvents>.Unsubscribe<int>(InputEvents.BombPressed, LaunchBomb);
+    }
+
+    public void  deadHandling()
+    {
+        Gamemanager.instance.PlayerDied();
+    }
 }

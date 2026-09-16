@@ -5,9 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Healtcomponent : IObservable<HealthData>
 {
+    public delegate void Death();
+
+    public Death onDead = delegate { };
     protected List<IObserver<HealthData>> healtObservers = new();
     [SerializeField] private int MaxHealth = 3;
-    protected int CurrentHealth;
+    public int CurrentHealth;
 
     public Healtcomponent()
     {
@@ -41,8 +44,8 @@ public class Healtcomponent : IObservable<HealthData>
         }
     }
 
-    public void Die()
+    public  void Die()
     {
-
+        onDead?.Invoke();
     }
 }

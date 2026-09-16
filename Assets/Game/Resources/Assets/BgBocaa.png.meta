@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f5664368e2675c4db19ab5b4c900d4a
+guid: 3568cd28444ae384798b5abc53ecbd1e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5948729071571672598
-    second: Cobra_Recuadro-8_0
+      213: 2194488428776134246
+    second: BgBocaa_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cobra_Recuadro-8_0
+      name: BgBocaa_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 387
-        height: 388
+        width: 1080
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61e9118a2912e8250800000000000000
-      internalID: 5948729071571672598
+      spriteID: 66618ec5993647e10800000000000000
+      internalID: 2194488428776134246
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cobra_Recuadro-8_0: 5948729071571672598
+      BgBocaa_0: 2194488428776134246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

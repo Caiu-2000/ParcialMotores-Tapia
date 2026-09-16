@@ -28,3 +28,9 @@ public enum GameState
     Running
 
 }
+
+
+public enum InputEvents
+{
+    BombPressed
+}
