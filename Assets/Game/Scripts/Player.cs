@@ -1,14 +1,12 @@
 
 using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-
 
 public class Player : Entity
 {
     [SerializeField] float speed = 2.0f;
     [SerializeField] Bullet bulletPrefab;
-    [SerializeField] Bullet SpecialBulletPreffab;
+ 
     
     
 
@@ -22,15 +20,17 @@ public class Player : Entity
     [SerializeField] protected IPasive pasive;
 
 
-    [SerializeField] protected Collectable collectable;
+    
 
     [SerializeField] protected Sprite BaseSprite;
     [SerializeField] Sprite InvincibleSprite;
     [SerializeField] Sprite BuffedSprite;
 
+    [SerializeField] int PoolSize = 1;
+
     [SerializeField] SpriteRenderer characterRenderer;
     protected BulletPool bulletPool;
-
+    protected int bombCuantity = 3;
     public bool Buffed { private set; get; } = false;
     public bool invincible { private set; get; } = false;
 
@@ -43,9 +43,12 @@ public class Player : Entity
     }
     private void Start()
     {
-        bulletPool = new BulletPool(bulletPrefab, 1);
+        bulletPool = new BulletPool(bulletPrefab, PoolSize);
         StartCoroutine(FireRutine());
-        
+        EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
+        EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
+        healtcomponent.onDead += deadHandling;
+
     }
     private IEnumerator FireRutine()
     {
@@ -53,20 +56,28 @@ public class Player : Entity
         while (true)
         {
             Bullet bullet = bulletPool.GetPrefab();
-            bullet.RestartBullet(this , switchbullet);
+            bullet.RestartBullet(this , switchbullet , Buffed);
             bullet.Spawned(this.transform.position);
             switchbullet = !switchbullet;
             yield return new WaitForSeconds(0.25f);
         }
     }
 
-    public void LaunchBomb()
+    // Con el eventmanager no se poner eventos sin valores asi que queda con variable x solo para poder pasar. Por eso no se usa
+    public void LaunchBomb(int x)
     {
-
+        
+        if (bombCuantity > 0) 
+        {
+            bombCuantity -= 1;
+            EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
+            StartCoroutine(InvincibleTime(1.0f));
+            bomb.Activate(); 
+        }
     }
-    public void BuffPlayer()
+    public void BuffPlayer(float buffDuration = 2.0f)
     {
-
+        StartCoroutine(BuffRoutine(buffDuration));
     }
     private IEnumerator BuffRoutine(float Bufftime)
     {
@@ -86,28 +97,28 @@ public class Player : Entity
         if (invincible) characterRenderer.sprite = InvincibleSprite;
         else if (Buffed) characterRenderer.sprite = BuffedSprite;
         else characterRenderer.sprite = BaseSprite;
-    } 
-
-}
-
-public abstract class Collectable : MonoBehaviour
-{
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (TryGetComponent<Player>(out Player player))
-        {
-            applySelf(player);
-        }
     }
-    public abstract void applySelf(Player player);
-
-
-}
-public class BuffCollectable : Collectable
-{
-    public override void applySelf(Player player)
+    public override void OnHit(DamageData data)
     {
-        throw new System.NotImplementedException();
+        if (invincible) return;
+        base.OnHit(data);
+        EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
+    }
+
+    public BulletPool getPool() => bulletPool;
+
+
+    private void OnEnable()
+    {
+        EventManager<InputEvents>.Subscribe<int>(InputEvents.BombPressed, LaunchBomb);
+    }
+    private void OnDisable()
+    {
+        EventManager<InputEvents>.Unsubscribe<int>(InputEvents.BombPressed, LaunchBomb);
+    }
+
+    public void  deadHandling()
+    {
+        Gamemanager.instance.PlayerDied();
     }
 }

@@ -15,7 +15,9 @@ public enum GameEvent
     HealPlayer,
     DamagePlayer,
     
-    GameStateChanged
+    GameStateChanged,
+
+    BombTroued
 
 }
 
@@ -25,4 +27,10 @@ public enum GameState
     OnHold,
     Running
 
+}
+
+
+public enum InputEvents
+{
+    BombPressed
 }

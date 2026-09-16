@@ -29,7 +29,7 @@ public class Gamemanager : MonoBehaviour
 
     public void PlayerDied()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("DeathScene");
     }
 }
 

@@ -22,6 +22,6 @@ MonoBehaviour:
   Alcance: 1
   Duracion: 1
   Estabilidad: 2
-  BulletsExample: {fileID: 21300000, guid: 573525812432fc14dae6459474b448d0, type: 3}
+  BulletsExample: {fileID: 5948729071571672598, guid: 8f5664368e2675c4db19ab5b4c900d4a, type: 3}
   bullet: {fileID: 0}
   bomb: {fileID: 0}
