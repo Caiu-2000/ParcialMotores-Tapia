@@ -1,5 +1,7 @@
 
+using System;
 using System.Collections;
+
 using UnityEngine;
 
 public class Player : Entity
@@ -35,12 +37,21 @@ public class Player : Entity
     public bool invincible { private set; get; } = false;
 
 
-
+    // Este mueve al personaje 
     public void Move(Vector2 dir)
     {
         
         transform.position += new Vector3(dir.x , dir.y , 0.0f) * speed * Time.deltaTime;
     }
+    // Este es para que se dirija a un punto especifico. 
+    public void MoveTowards(Vector3 objective)
+    {
+        if (Vector3.Distance(objective, transform.position) < 0.1f) return;
+        Vector3 direction = (objective - transform.position).normalized;
+  
+        Move(direction);
+    }
+
     private void Start()
     {
         bulletPool = new BulletPool(bulletPrefab, PoolSize);

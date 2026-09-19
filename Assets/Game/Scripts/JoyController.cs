@@ -10,11 +10,14 @@ public class JoyController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     Vector2 firstPosition = new Vector2();
 
-    Vector2 BeguinPosition;
-
+    Vector3 BeguinPosition;
+    Vector3 offset;
     Player character;
     private bool _dragging = false;
-    Vector2 direction;
+   
+
+    Vector3 currentposition;
+
 
     private void Start()
     {
@@ -23,31 +26,33 @@ public class JoyController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        BeguinPosition = eventData.position;
+        BeguinPosition = GetWorldPosition(eventData.position);
+        offset = character.transform.position - BeguinPosition;
         _dragging = true;
-        print("Empezo");
+        
+    
     }
-
+    
     public void OnDrag(PointerEventData eventData)
     {
-        print("Me draguean");
-        transform.position = eventData.position;
-        direction = (eventData.position - BeguinPosition).normalized;
-        character.Move(direction);
+      currentposition = GetWorldPosition(eventData.position);
+        
 
     }
-
+    
     public void OnEndDrag(PointerEventData eventData)
     {
-        print("Termino el drag");
-        transform.position = firstPosition;
         _dragging = false;
 
     }
 
     private void Update()
     {
-        if (_dragging) { character.Move(direction); }
+        if (_dragging) 
+        {
+            character.MoveTowards(currentposition + offset); 
+        
+        }
     }
 
     public void SetPlayer(Player player)
@@ -55,89 +60,15 @@ public class JoyController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         print("Se mando player");
         character = player;
     }
+
+    private Vector2 GetWorldPosition(Vector2 screenposition)
+    {
+        // el 10 es por la distancia a la que esta la camara por defecto en unity
+        Vector3 vector = new Vector3(screenposition.x, screenposition.y, 10);
+
+
+
+        return Camera.main.ScreenToWorldPoint(vector);
+    }
+
 }
-
-/*
-    [SerializeField] private Image _image;
-
-    Vector2 firstPosition = new Vector2();
-
-    Vector2 BeguinPosition;
-
-    Player character;
-    private bool _dragging = false;
-    Vector2 direction;
-
-
-
-
-
-    [SerializeField] private float pauseDelay = 0.5f; // Time in seconds to qualify as a "pause"
-
-    private float idleTimer;
-    private bool isDragging;
-    private bool isPaused;
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        isDragging = true;
-        isPaused = false;
-        idleTimer = 0f;
-        Debug.Log("Drag Started");
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        // 1. Move the UI object with the pointer
-        transform.position = eventData.position;
-
-        // 2. Check for Resume
-        if (isPaused)
-        {
-            isPaused = false;
-            OnDragResumed();
-        }
-
-        // 3. Reset the idle timer because movement happened
-        idleTimer = 0f;
-    }
-
-    private void Update()
-    {
-        // 4. Increment timer only while finger is down and not already paused
-        if (isDragging && !isPaused)
-        {
-            idleTimer += Time.deltaTime;
-
-            if (idleTimer >= pauseDelay)
-            {
-                isPaused = true;
-                OnDragPaused();
-            }
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        isDragging = false;
-        isPaused = false;
-        Debug.Log("Drag Ended");
-    }
-
-    private void OnDragPaused()
-    {
-        Debug.Log("Drag PAUSED (Finger is still on screen!)");
-        // Add your custom logic here (e.g., show a tooltip, expand a menu)
-    }
-
-    private void OnDragResumed()
-    {
-        Debug.Log("Drag RESUMED!");
-        // Add your custom logic here (e.g., hide the tooltip)
-    }
-    public void SetPlayer(Player player)
-    {
-        print("Se mando player");
-        character = player;
-    }
-}*/

@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4870111390713354314}
@@ -137,7 +137,7 @@ MonoBehaviour:
   healtcomponent:
     MaxHealth: 3
     CurrentHealth: 3
-  speed: 2
+  speed: 4
   bulletPrefab: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}
   bomb: {fileID: 4193967523205341458}
   power: 1
@@ -185,7 +185,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.23
 --- !u!1001 &5887189884720331293
 PrefabInstance:
   m_ObjectHideFlags: 0
