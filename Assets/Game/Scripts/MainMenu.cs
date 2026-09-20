@@ -7,6 +7,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject Selection;
     [SerializeField] GameObject Comic;
 
+    private void Start()
+    {
+        GoMenu();
+    }
     public void PressedPlay()
     {
         if (!ComicReaded)

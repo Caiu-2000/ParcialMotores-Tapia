@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
+
+
 
 
 
@@ -46,6 +49,10 @@ public static class EventManager<TEvent>
             currentListeners is Action<TData> typedListeners)
         {
             typedListeners.Invoke(data);
+        }
+        else
+        {
+            throw new InvalidOperationException("No se encontro");
         }
     }
 }

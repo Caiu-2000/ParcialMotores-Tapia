@@ -7,7 +7,7 @@ public class PointsCounter : MonoBehaviour
     public void AddPoints(int points)
     {
         RunManager.RunPoints += points;
-        text.text = "AURA : " + points.ToString();
+        text.text = points.ToString();
         
     }
     private void Start()

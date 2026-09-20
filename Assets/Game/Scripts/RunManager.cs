@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 
 public class RunManager : MonoBehaviour
 {
     public static RunManager instance;
     public static int RunPoints = 0;
+    public static float RunTime = 0;
     [SerializeField] JoyController join;
     [SerializeField] Transform leftLimit, rigthLimit;
     [SerializeField] Transform PlayerSpawn;
@@ -16,6 +18,7 @@ public class RunManager : MonoBehaviour
         join.SetPlayer(playerIns);
         playerIns.transform.position = PlayerSpawn.position;
         RunPoints = 0;
+        RunTime = 0;
 
 
         // Es un singletone raro por que se reemplaza siempre que puede
@@ -24,6 +27,10 @@ public class RunManager : MonoBehaviour
        
 
     }
+
+
+
+
 
 #if UNITY_EDITOR
     private void Update()
@@ -36,7 +43,7 @@ public class RunManager : MonoBehaviour
         return rigthLimit.position.x - leftLimit.position.x;
     }
 
-
+    
 
 #endif
 }
