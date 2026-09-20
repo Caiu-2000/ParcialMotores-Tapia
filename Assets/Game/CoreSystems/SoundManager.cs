@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 
 
 public  class SoundManager : MonoBehaviour
@@ -62,17 +63,38 @@ public  class SoundManager : MonoBehaviour
         sound.Source.loop = loop;
         sound.Source.Play();
     }
+    public void PlayPitched(SoundTypes name , bool loop  = false)
+    {
+
+        Sound sound = FindSound(name);
+
+        if (sound == null) return;
+
+        sound.Source.loop = loop;
+        sound.Source.pitch = Random.Range(-0.5f, 3.0f);
+        sound.Source.Play();
+        sound.Source.pitch = 1;
+    }
     public void PlayRandom(SoundTypes name)
     {
         AudioAlbum album = FindAlbum(name);
         if (album != null) album.PlayAudio();
     }
-
+    public void PlayRandomPitch(SoundTypes name)
+    {
+        AudioAlbum album = FindAlbum(name);
+        if (album != null)
+        {
+            album.Source.pitch = Random.Range(-0.5f, 3.0f);
+            album.PlayAudio();
+            album.Source.pitch = 1;
+        }
+    }
     private AudioAlbum FindAlbum(SoundTypes name)
     {
         foreach (AudioAlbum album in albums) 
         {
-            print(album.type);
+          
             if (album.type == name) { return album; } 
         }
         return null;

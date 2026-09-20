@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4037736, g: 0.38015667, b: 0.38015667, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1231,6 +1231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 997481434}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &801936467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,6 +1375,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 997481434}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &904510743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1491,6 +1515,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 997481434}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2445,6 +2481,7 @@ GameObject:
   - component: {fileID: 1649074364}
   - component: {fileID: 1649074363}
   - component: {fileID: 1649074362}
+  - component: {fileID: 1649074365}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2514,7 +2551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649074363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1649074365}
+        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_MethodName: Onclicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1649074363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2553,6 +2602,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649074360}
   m_CullTransparentMesh: 1
+--- !u!114 &1649074365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649074360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422ad1f73ffb58a459027d0d6dfb9078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719314191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,6 +3061,18 @@ MonoBehaviour:
       - m_Target: {fileID: 997481434}
         m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
         m_MethodName: PlayPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 997481434}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: MakeSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3979,23 +4052,31 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
-      propertyPath: 'AudioMixer.Array.data[0]'
-      value: 
-      objectReference: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+      propertyPath: sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
-      propertyPath: albums.Array.data[1].AudioMixer
-      value: 
-      objectReference: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+      propertyPath: sounds.Array.data[0].type
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
-      propertyPath: albums.Array.data[2].AudioMixer
-      value: 
-      objectReference: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
-      propertyPath: albums.Array.data[3].AudioMixer
+      propertyPath: albums.Array.data[3].volume
+      value: 0.561
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
+      propertyPath: sounds.Array.data[0].soundClip
       value: 
-      objectReference: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
-    - target: {fileID: 7584786389722464918, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
-      propertyPath: OutputAudioMixerGroup
+      objectReference: {fileID: 8300000, guid: 2a44a02e8b37f2d49ac83187475b6a6d, type: 3}
+    - target: {fileID: 6225989162982678625, guid: df74d24c9f738a04c814c678d49969ec, type: 3}
+      propertyPath: sounds.Array.data[0].AudioMixer
       value: 
       objectReference: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
     m_RemovedComponents: []

@@ -150,6 +150,7 @@ MonoBehaviour:
   BuffedSprite: {fileID: -5281111534082226694, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   PoolSize: 30
   characterRenderer: {fileID: 5988750016931965059}
+  FireTime: 0.1
 --- !u!58 &-4149240846498598222
 CircleCollider2D:
   m_ObjectHideFlags: 0
