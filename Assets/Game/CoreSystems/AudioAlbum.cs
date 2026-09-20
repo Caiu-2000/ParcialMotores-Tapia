@@ -1,5 +1,5 @@
 using System;
-
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -16,6 +16,7 @@ public class AudioAlbum
     internal void PlayAudio()
     {
         Debug.Log("PlayAudioSeEjecuto");
+        Debug.Log(AudioMixer);
         Source.clip = soundClip[UnityEngine.Random.Range(0, soundClip.Length)] ;
         Source.Play();
     }

@@ -66,6 +66,7 @@ public class Player : Entity
         bool switchbullet = false;
         while (true)
         {
+            SoundManager.instance.PlayRandom(SoundTypes.FiredPlayer);
             Bullet bullet = bulletPool.GetPrefab();
             bullet.RestartBullet(this , switchbullet , Buffed);
             bullet.Spawned(this.transform.position);
@@ -113,6 +114,7 @@ public class Player : Entity
     {
         if (invincible) return;
         base.OnHit(data);
+        SoundManager.instance.PlayRandom(SoundTypes.HittedPlayer);
         EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
     }
 
