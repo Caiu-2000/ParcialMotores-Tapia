@@ -35,14 +35,16 @@ public  class SoundManager : MonoBehaviour
             sound.Source.outputAudioMixerGroup = sound.AudioMixer;
             sound.Source.volume = sound.volume;
             sound.Source.pitch = sound.pitch;
-            sound.Source.loop = sound.IsLoop;
+            sound.Source.loop =false;
         }
         foreach (AudioAlbum album in albums)
         {
             album.Source = gameObject.AddComponent<AudioSource>();
             album.Source.outputAudioMixerGroup = album.AudioMixer;
+            
             album.Source.volume = album.volume;
         }
+        SetAllMixersActive(true);
     }
 
 
@@ -119,4 +121,9 @@ public  class SoundManager : MonoBehaviour
 
     }
 
+
+    private void Update()
+    {
+        this.transform.position = Camera.main.transform.position;
+    }
 }

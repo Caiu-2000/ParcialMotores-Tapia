@@ -71,6 +71,13 @@ public enum SoundTypes
 {
     menu,
     Start,
-    Death
+    Death,
+
+    HittedEnemy,
+    HittedPlayer,
+
+    FiredPlayer,
+
+    Bomb
 
 }

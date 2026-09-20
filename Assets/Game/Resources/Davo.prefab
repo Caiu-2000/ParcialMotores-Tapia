@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4461531074777770356}
@@ -137,7 +137,7 @@ MonoBehaviour:
   healtcomponent:
     MaxHealth: 3
     CurrentHealth: 3
-  speed: 2
+  speed: 8
   bulletPrefab: {fileID: 6615566956458720108, guid: 5e0100fb9bf0e7b4cb7f61f0d04d8e1b, type: 3}
   bomb: {fileID: 6137374910689925409}
   power: 1
@@ -145,7 +145,6 @@ MonoBehaviour:
   duration: 1
   stability: 1
   SellectedBuild: 0
-  collectable: {fileID: 0}
   BaseSprite: {fileID: 1021963298582083004, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   InvincibleSprite: {fileID: 3553923059935295675, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   BuffedSprite: {fileID: -5281111534082226694, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
@@ -186,7 +185,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
+  m_Radius: 0.14
 --- !u!1001 &291309945172430959
 PrefabInstance:
   m_ObjectHideFlags: 0

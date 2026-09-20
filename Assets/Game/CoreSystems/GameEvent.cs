@@ -17,7 +17,9 @@ public enum GameEvent
     
     GameStateChanged,
 
-    BombTroued
+    BombTroued,
+    GamePaused,
+    GameResumed
 
 }
 
