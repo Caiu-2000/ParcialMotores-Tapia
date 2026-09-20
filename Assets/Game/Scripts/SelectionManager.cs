@@ -54,6 +54,7 @@ public class SelectionManager : MonoBehaviour
 
     public void UpdateDificulty(int diference = 0)
     {
+      
         GlobalData.CurrentDificulty += diference;
         if (GlobalData.CurrentDificulty < 0) { GlobalData.CurrentDificulty = Dificltys.HARD; }
         if (GlobalData.CurrentDificulty > Dificltys.HARD) { GlobalData.CurrentDificulty = Dificltys.EASY; }
@@ -68,19 +69,25 @@ public class SelectionManager : MonoBehaviour
 
     public void ChangeCharacer(int diference)
     {
+
         selected += diference;
         if (selected < 0) { selected = CharacterNames.Davo; }
         if (selected > CharacterNames.Davo) { selected = CharacterNames.Cobra; }
-
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
         UpdateUi();
     }
 
     public void PlayPressed()
     {
         GlobalData.SelectedCharacter = selected;
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
         SceneManager.LoadScene(2);
     }
 
+    public void MakeSound()
+    {
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
+    }
 
 }
 public static class GlobalData

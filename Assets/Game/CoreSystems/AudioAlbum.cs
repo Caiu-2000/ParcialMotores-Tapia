@@ -15,8 +15,7 @@ public class AudioAlbum
 
     internal void PlayAudio()
     {
-        Debug.Log("PlayAudioSeEjecuto");
-        Debug.Log(AudioMixer);
+        
         Source.clip = soundClip[UnityEngine.Random.Range(0, soundClip.Length)] ;
         Source.Play();
     }

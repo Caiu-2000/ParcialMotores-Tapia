@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PressedPlay()
     {
+       
         if (!ComicReaded)
         {
             ComicReaded = true;
@@ -28,10 +29,12 @@ public class MainMenu : MonoBehaviour
     {
         HideAll();
         Comic.SetActive(true);
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
     }
     public void GoSelection()
     {
         HideAll();
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
         Selection.SetActive(true);
         
     }
@@ -41,6 +44,7 @@ public class MainMenu : MonoBehaviour
         HideAll();
         Menu.SetActive(true);
         
+
     }
     public void HideAll()
     {

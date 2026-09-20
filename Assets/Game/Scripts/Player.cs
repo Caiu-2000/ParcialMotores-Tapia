@@ -31,6 +31,8 @@ public class Player : Entity
     [SerializeField] int PoolSize = 1;
 
     [SerializeField] SpriteRenderer characterRenderer;
+
+    [SerializeField] float FireTime = 0.25f;
     protected BulletPool bulletPool;
     protected int bombCuantity = 3;
     public bool Buffed { private set; get; } = false;
@@ -71,7 +73,7 @@ public class Player : Entity
             bullet.RestartBullet(this , switchbullet , Buffed);
             bullet.Spawned(this.transform.position);
             switchbullet = !switchbullet;
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(FireTime);
         }
     }
 
@@ -89,6 +91,7 @@ public class Player : Entity
     }
     public void BuffPlayer(float buffDuration = 2.0f)
     {
+        SoundManager.instance.PlayPitched(SoundTypes.PowerUp);
         StartCoroutine(BuffRoutine(buffDuration));
     }
     private IEnumerator BuffRoutine(float Bufftime)
