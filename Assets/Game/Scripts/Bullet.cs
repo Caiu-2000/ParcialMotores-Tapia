@@ -8,21 +8,24 @@ using UnityEngine;
 public class Bullet : MonoBehaviour , IPoolable
 {
     [SerializeField] Sprite[] sprites;
+    [SerializeField] Sprite[] SpecialSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     protected Entity who;
     protected System.Action<IPoolable> returnAction;
     public void Spawned(Vector3 position)
     {
-        
+        transform.rotation = Quaternion.identity;
         transform.position = position;
         StartCoroutine(DeleteTime());
     }
  
-    public void RestartBullet(Entity who ,bool variation = false)
+    public void RestartBullet(Entity who ,bool variation = false , bool special = false)
     {
         this.who = who;
-        spriteRenderer.sprite = variation ? sprites[0] : sprites[1];
+        if (!special)
+            spriteRenderer.sprite = variation ? sprites[0] : sprites[1];
+        else{ spriteRenderer.sprite = variation ? SpecialSprite[0] : SpecialSprite[1]; }
     }
 
     public void ReturnToPool(Action<IPoolable> returnaction)
@@ -33,7 +36,7 @@ public class Bullet : MonoBehaviour , IPoolable
 
     private void Update()
     {
-        transform.position += Vector3.up * 5.0f * Time.deltaTime;
+        transform.position += transform.up * 5.0f * Time.deltaTime;
     }
 
 
@@ -61,5 +64,21 @@ public class Bullet : MonoBehaviour , IPoolable
             DisableBullet();
         }
     }
+
+}
+
+public enum SoundTypes
+{
+    menu,
+    Start,
+    Death,
+
+    HittedEnemy,
+    HittedPlayer,
+
+    FiredPlayer,
+
+    Bomb,
+    PowerUp
 
 }

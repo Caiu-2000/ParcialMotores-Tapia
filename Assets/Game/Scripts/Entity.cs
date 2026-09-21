@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour , IHittable
 {
-    [SerializeField] Healtcomponent healtcomponent= new Healtcomponent();
+    [SerializeField] protected Healtcomponent healtcomponent= new Healtcomponent();
 
     public virtual void Die()
     {

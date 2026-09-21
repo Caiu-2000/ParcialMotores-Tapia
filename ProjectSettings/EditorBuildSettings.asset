@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9479b89512934bc42bdc91eb78686e58
+  - enabled: 1
+    path: Assets/Game/CombatTemplate.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 5f9a21e46e1925a448120a403f9d0715
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: a26810da7c55f364db26b695acf6fd63
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

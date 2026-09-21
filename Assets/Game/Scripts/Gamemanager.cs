@@ -1,9 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Gamemanager : MonoBehaviour
 {
-    public Gamemanager instance { get; private set; }
+    public static Gamemanager instance { get; private set; }
+
+
+    [SerializeField]
+    public Sprite DefaultTexture;
+
+
+
+    public Player[] CharactersList = new Player[1];
 
     void Start()
     {
@@ -20,6 +29,14 @@ public class Gamemanager : MonoBehaviour
 
     public void PlayerDied()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("DeathScene");
     }
+}
+
+
+public enum CharacterNames
+{
+    Cobra,
+    Davo
+    
 }

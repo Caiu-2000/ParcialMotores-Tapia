@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a380d1c9b155c42981b2e83df9b755, type: 3}
+  m_Name: Cobra
+  m_EditorClassIdentifier: 
+  Name: Cobra
+  SpecialDescription: x2 de aura
+  dificultySprites:
+  - {fileID: 2844007018818766081, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: 5849544522290482525, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  - {fileID: 2173239620405203007, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  Power: 0
+  Alcance: 1
+  Duracion: 1
+  Estabilidad: 2
+  BulletsExample: {fileID: 5948729071571672598, guid: 8f5664368e2675c4db19ab5b4c900d4a, type: 3}
+  bullet: {fileID: 0}
+  bomb: {fileID: 0}
