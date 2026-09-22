@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject Menu;
     [SerializeField] GameObject Selection;
     [SerializeField] GameObject Comic;
+    [SerializeField] GameObject Credits;
 
     private void Start()
     {
@@ -38,7 +39,11 @@ public class MainMenu : MonoBehaviour
         Selection.SetActive(true);
         
     }
-
+    public void GoCredits()
+    {
+        HideAll();
+        Credits.SetActive(true);
+    }
     public void GoMenu()
     {
         HideAll();
@@ -51,5 +56,6 @@ public class MainMenu : MonoBehaviour
         Selection.SetActive(false);
         Menu.SetActive(false);
         Comic.SetActive(false);
+        Credits.SetActive(false);
     }
 }
