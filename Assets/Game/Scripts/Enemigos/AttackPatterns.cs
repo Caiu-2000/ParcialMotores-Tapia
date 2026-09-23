@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class AttackPatterns : IShoot
+public abstract class AttackPatterns : ScriptableObject, IShoot
 {
     protected BulletPool bulletPool;
     protected Transform muzzlePos;

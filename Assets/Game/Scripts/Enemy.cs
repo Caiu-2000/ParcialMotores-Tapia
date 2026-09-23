@@ -12,26 +12,29 @@ public class Enemy : Entity, ISpawnable
     BulletPool bulletPool;
     BaseEnemyMovement enemyMovement;
     BaseEnemyAttack enemyAttack;
-    //bandAid delete later
-    Spiralpattern spiral;
-    Diagonal3 diagonal;
+    List<AttackPatterns> runtimePatterns = new List<AttackPatterns> ();
+
 
     bool shootReady = true;
     private void Awake()
     {
         healtcomponent.onDead += Die;
-        BandAidSolution();
+        //debug
+        OnCreated(muzzlePos.position, Quaternion.identity);
     }
     public void OnCreated(Vector3 position, Quaternion rotation)
     {
         transform.SetPositionAndRotation(position, rotation);
-        BandAidSolution();
         bulletPool = new BulletPool(bulletPrefab, bulletPoolSize);
+        foreach (AttackPatterns pattern in attackPatterns)
+        {
+            runtimePatterns.Add(Instantiate(pattern));
+        }
         enemyMovement = new BaseEnemyMovement(transform);
-        enemyAttack = new BaseEnemyAttack(bulletPool, muzzlePos, this, attackPatterns);
+        enemyAttack = new BaseEnemyAttack(bulletPool, muzzlePos, this, runtimePatterns);
         shootReady = true;
     }
-    void Update()
+    protected void Update()
     {
         enemyMovement.move();
         if (shootReady)
@@ -40,7 +43,7 @@ public class Enemy : Entity, ISpawnable
         }
         enemyAttack.UpdateTimer();
     }
-    IEnumerator ShootSequence()
+    protected IEnumerator ShootSequence()
     {
         shootReady = false;
         enemyAttack.Shoot();
@@ -52,19 +55,11 @@ public class Enemy : Entity, ISpawnable
         if (data.FromWho is Player) base.OnHit(data);
 
     }
-    public void BandAidSolution()
-    {
-        //band aid solution to the attacks pattern, ask the prof how to solve it
-        spiral = new Spiralpattern();
-        spiral.Init(bulletPool, muzzlePos, this);
-        diagonal = new Diagonal3();
-        diagonal.Init(bulletPool, muzzlePos, this);
-        attackPatterns.Add(spiral);
-        attackPatterns.Add(diagonal);
-    }
+
     public override void Die()
     {
         EventManager<GameEvent>.Publish<int>(GameEvent.AddPoints, scoreValue);
+        EventManager<GameEvent>.Publish<int>(GameEvent.EnemyKilled, 1);
         base.Die();
     }
 }

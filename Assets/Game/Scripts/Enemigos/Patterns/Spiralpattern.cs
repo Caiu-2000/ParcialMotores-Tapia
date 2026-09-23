@@ -1,4 +1,5 @@
 using UnityEngine;
+[CreateAssetMenu(fileName = "Spiral", menuName = "Enemigos/Patterns/Spiral")]
 public class Spiralpattern : AttackPatterns
 {
     private float spiralAngle;

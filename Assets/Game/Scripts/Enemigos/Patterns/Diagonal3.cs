@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName ="Diagonal3", menuName = "Enemigos/Patterns/Diagonal3")]
 public class Diagonal3 : AttackPatterns
 {
     [SerializeField] int bulletsToShoot = 12;
