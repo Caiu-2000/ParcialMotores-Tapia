@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6810199510991283997}
   - component: {fileID: 735628183231792267}
   - component: {fileID: 3064966132065698232}
+  - component: {fileID: 8688836641666923397}
   m_Layer: 0
   m_Name: Tapia
   m_TagString: Untagged
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healtcomponent:
     MaxHealth: 50
+    CdTime: 0
     CurrentHealth: 50
   muzzlePos: {fileID: 539259543556317936}
   bulletPrefab: {fileID: 8373707314684792283, guid: 548b849cdbb04f5478a6ee62d2cbd5b9, type: 3}
@@ -186,6 +188,19 @@ MonoBehaviour:
   chargingSprite: {fileID: 7370547117168144535, guid: b809644781ada56488ed145ac5049191, type: 3}
   firingSprite: {fileID: -5758276559932522558, guid: 058209e6975ed3e4781768affce3400b, type: 3}
   laserBeam: {fileID: 682363795773654310}
+--- !u!114 &8688836641666923397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137159599232023601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcf978a02b19742b17a030d41dfde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entity: {fileID: 0}
 --- !u!1 &5859783740703386121
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,6 +33,22 @@ public class Gamemanager : MonoBehaviour
     {
         SceneManager.LoadScene("DeathScene");
     }
+    public static void GoMenu()
+    {
+        SceneManager.LoadScene("MainMenu");     
+    }
+
+    
+    public void UniversalTimer(float time, ITimable Caller)
+    {
+        StartCoroutine(count(time, Caller));
+    }
+    public IEnumerator count(float time, ITimable Caller)
+    {
+        print("Se llamo manager  " + time);
+        yield return new WaitForSeconds(time);
+        Caller.TimeStopped();
+    }
 }
 
 
@@ -40,3 +58,4 @@ public enum CharacterNames
     Davo
     
 }
+

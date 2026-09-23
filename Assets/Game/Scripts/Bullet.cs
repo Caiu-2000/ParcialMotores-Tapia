@@ -79,6 +79,6 @@ public enum SoundTypes
     FiredPlayer,
 
     Bomb,
-    PowerUp
-
+    PowerUp,
+    EnemyDead
 }

@@ -25,7 +25,7 @@ public class Diagonal3 : AttackPatterns
     }
     public override bool Shoot()
     {
-        Debug.Log("Selected Diagonal");
+        
         return DiagonalShoot();
     }
 }

@@ -6,8 +6,9 @@ public class PointsCounter : MonoBehaviour
     private TextMeshProUGUI text;
     public void AddPoints(int points)
     {
+        print(points);
         RunManager.RunPoints += points;
-        text.text = points.ToString();
+        text.text = RunManager.RunPoints.ToString();
         
     }
     private void Start()

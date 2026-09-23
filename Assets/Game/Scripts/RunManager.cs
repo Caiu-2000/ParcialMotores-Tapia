@@ -1,7 +1,6 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-
 
 public class RunManager : MonoBehaviour
 {
@@ -11,7 +10,10 @@ public class RunManager : MonoBehaviour
     [SerializeField] JoyController join;
     [SerializeField] Transform leftLimit, rigthLimit;
     [SerializeField] Transform PlayerSpawn;
-   
+
+    InputAction GoBack;
+    [SerializeField] PauseManager pause;
+
     void Start()
     {
         Player playerIns = Instantiate(Gamemanager.instance.CharactersList[(int)GlobalData.SelectedCharacter]);
@@ -24,7 +26,7 @@ public class RunManager : MonoBehaviour
         // Es un singletone raro por que se reemplaza siempre que puede
         if (instance != null) Destroy(instance);
         instance = this;
-       
+        GoBack = InputSystem.actions.FindAction("Cancel");
 
     }
 
@@ -35,15 +37,11 @@ public class RunManager : MonoBehaviour
     {
         return rigthLimit.position.x - leftLimit.position.x;
     }
-#if UNITY_EDITOR
-    private void Update()
+    void Update()
     {
-        if (Keyboard.current.rKey.wasPressedThisFrame) { UnityEngine.SceneManagement.SceneManager.LoadScene(1); }
+        if (GoBack.WasPressedThisFrame()) pause.ChangeGameState(GameState.OnHold); ;
     }
-
-
-
     
 
-#endif
+
 }

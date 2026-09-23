@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f2811db1031684e84da54a2b906356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - type: 8
+    soundClip: {fileID: 8300000, guid: 5d593232bd4886b4c8f73a5038cc67db, type: 3}
+    AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 0}
   albums:
   - type: 4
     soundClip:

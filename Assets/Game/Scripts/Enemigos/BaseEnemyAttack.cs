@@ -26,9 +26,9 @@ public class BaseEnemyAttack
             selectPattern = attacksPatterns.Count == 1 ? 0 : Random.Range(0, attacksPatterns.Count);
             firing = true;
         }
-        Debug.Log("Test");
+    
         readyToShoot = attacksPatterns[selectPattern].Shoot();
-        Debug.Log("Test2");
+    
         if (readyToShoot == false)
         {
             cooldown = attackCooldown;

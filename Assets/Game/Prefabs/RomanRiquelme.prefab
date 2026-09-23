@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6810199510991283997}
   - component: {fileID: 735628183231792267}
   - component: {fileID: 3388747706862673575}
+  - component: {fileID: 1015244423593184871}
   m_Layer: 0
   m_Name: RomanRiquelme
   m_TagString: Untagged
@@ -168,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healtcomponent:
     MaxHealth: 5
+    CdTime: 0
     CurrentHealth: 5
   muzzlePos: {fileID: 539259543556317936}
   bulletPrefab: {fileID: 8373707314684792283, guid: 548b849cdbb04f5478a6ee62d2cbd5b9, type: 3}
@@ -176,3 +178,16 @@ MonoBehaviour:
   attackPatterns:
   - {fileID: 11400000, guid: 795acdfa4d2e74048ba0da7e98bc919e, type: 2}
   - {fileID: 11400000, guid: c91e2dae1b7ef814bab434d1237a3294, type: 2}
+--- !u!114 &1015244423593184871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137159599232023601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcf978a02b19742b17a030d41dfde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entity: {fileID: 0}
