@@ -31,17 +31,17 @@ public class RunManager : MonoBehaviour
 
 
 
-
+    public float GetlimitRange()
+    {
+        return rigthLimit.position.x - leftLimit.position.x;
+    }
 #if UNITY_EDITOR
     private void Update()
     {
         if (Keyboard.current.rKey.wasPressedThisFrame) { UnityEngine.SceneManagement.SceneManager.LoadScene(1); }
     }
 
-    public float GetlimitRange()
-    {
-        return rigthLimit.position.x - leftLimit.position.x;
-    }
+
 
     
 

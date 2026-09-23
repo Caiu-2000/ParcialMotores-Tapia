@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 058209e6975ed3e4781768affce3400b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5155014711531016397
+    second: Enemigos_Para_Fede_0
+  - first:
+      213: -492052090979818120
+    second: Enemigos_Para_Fede_1
+  - first:
+      213: 2174567932706332253
+    second: Enemigos_Para_Fede_2
+  - first:
+      213: 664199014549822800
+    second: Enemigos_Para_Fede_3
+  - first:
+      213: -5758276559932522558
+    second: Enemigos_Para_Fede_4
+  - first:
+      213: 4518586668088979042
+    second: Enemigos_Para_Fede_5
+  - first:
+      213: 7165673030483127417
+    second: Enemigos_Para_Fede_6
+  - first:
+      213: 8573391265188360630
+    second: Enemigos_Para_Fede_7
+  - first:
+      213: 8747694497049124292
+    second: Enemigos_Para_Fede_8
+  - first:
+      213: -2219192551191929896
+    second: Enemigos_Para_Fede_9
+  - first:
+      213: 5144778617677724906
+    second: Enemigos_Para_Fede_10
+  - first:
+      213: 9061361799525586821
+    second: Enemigos_Para_Fede_11
+  - first:
+      213: 8730446597115665147
+    second: Enemigos_Para_Fede_12
+  - first:
+      213: 756720984493310993
+    second: Enemigos_Para_Fede_13
+  - first:
+      213: 6073346508919482994
+    second: Enemigos_Para_Fede_14
+  - first:
+      213: 7427640284586389791
+    second: Enemigos_Para_Fede_15
+  - first:
+      213: -5549807001325233005
+    second: Enemigos_Para_Fede_16
+  - first:
+      213: 6959802602388282352
+    second: Enemigos_Para_Fede_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1617
+        width: 72
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc018b4519a4a8740800000000000000
+      internalID: 5155014711531016397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_1
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1616
+        width: 144
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875e822fa31eb29f0800000000000000
+      internalID: -492052090979818120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_2
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1622
+        width: 170
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e9ae0730e9d2e10800000000000000
+      internalID: 2174567932706332253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_3
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1621
+        width: 170
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d18621c75b73900800000000000000
+      internalID: 664199014549822800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1616
+        width: 170
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf73c63afd7610b0800000000000000
+      internalID: -5758276559932522558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1487
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e624652ae35be30800000000000000
+      internalID: 4518586668088979042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_6
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1487
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c2b86e7a5917360800000000000000
+      internalID: 7165673030483127417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1402
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b13df19eedcaf670800000000000000
+      internalID: 8573391265188360630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_8
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1505
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd904c3ccd066970800000000000000
+      internalID: 8747694497049124292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_9
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1505
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db130ae128d331e0800000000000000
+      internalID: -2219192551191929896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_10
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1402
+        width: 114
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aecb4b205ece56740800000000000000
+      internalID: 5144778617677724906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_11
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1487
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587540a2c8c60cd70800000000000000
+      internalID: 9061361799525586821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 485
+        width: 497
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfad8979ce6c82970800000000000000
+      internalID: 8730446597115665147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_13
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1173
+        width: 99
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114cec2e9b9608a00800000000000000
+      internalID: 756720984493310993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_14
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1173
+        width: 100
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a210ec87cd84450800000000000000
+      internalID: 6073346508919482994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_15
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 485
+        width: 381
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11372a4c77441760800000000000000
+      internalID: 7427640284586389791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 333
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c980abfef1bf2b0800000000000000
+      internalID: -5549807001325233005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigos_Para_Fede_17
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 333
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb513e979f269060800000000000000
+      internalID: 6959802602388282352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Enemigos_Para_Fede_0: 5155014711531016397
+      Enemigos_Para_Fede_1: -492052090979818120
+      Enemigos_Para_Fede_10: 5144778617677724906
+      Enemigos_Para_Fede_11: 9061361799525586821
+      Enemigos_Para_Fede_12: 8730446597115665147
+      Enemigos_Para_Fede_13: 756720984493310993
+      Enemigos_Para_Fede_14: 6073346508919482994
+      Enemigos_Para_Fede_15: 7427640284586389791
+      Enemigos_Para_Fede_16: -5549807001325233005
+      Enemigos_Para_Fede_17: 6959802602388282352
+      Enemigos_Para_Fede_2: 2174567932706332253
+      Enemigos_Para_Fede_3: 664199014549822800
+      Enemigos_Para_Fede_4: -5758276559932522558
+      Enemigos_Para_Fede_5: 4518586668088979042
+      Enemigos_Para_Fede_6: 7165673030483127417
+      Enemigos_Para_Fede_7: 8573391265188360630
+      Enemigos_Para_Fede_8: 8747694497049124292
+      Enemigos_Para_Fede_9: -2219192551191929896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

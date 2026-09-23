@@ -9,7 +9,8 @@ public enum GameEvent
 
     PointsChanged,
 
-    EnemyKilled,
+    EnemyKilled, 
+    BossProgress,
 
     HealthChanged,
     HealPlayer,
