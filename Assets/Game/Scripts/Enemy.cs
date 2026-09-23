@@ -60,6 +60,7 @@ public class Enemy : Entity, ISpawnable
     {
         EventManager<GameEvent>.Publish<int>(GameEvent.AddPoints, scoreValue);
         EventManager<GameEvent>.Publish<int>(GameEvent.EnemyKilled, 1);
+        SoundManager.instance.PlayPitched(SoundTypes.EnemyDead);
         base.Die();
     }
 }

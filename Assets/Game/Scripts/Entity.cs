@@ -16,4 +16,6 @@ public class Entity : MonoBehaviour , IHittable
     {
         healtcomponent.Damage(data);
     }
+
+    public Healtcomponent getHealt() => healtcomponent;
 }

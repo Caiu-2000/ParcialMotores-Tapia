@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
+
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private List<CharacterStats> Characters = new List<CharacterStats>();
@@ -24,11 +25,13 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Duration;
     [SerializeField] private TextMeshProUGUI Estability;
 
-
-
+    InputAction GoBack;
+    [SerializeField] MainMenu menu;
+    
     private void Start()
     {
         UpdateUi();
+        GoBack = InputSystem.actions.FindAction("Cancel");
     }
 
 
@@ -89,6 +92,12 @@ public class SelectionManager : MonoBehaviour
         SoundManager.instance.PlayRandom(SoundTypes.menu);
     }
 
+    private void Update()
+    {
+        print("se ejecuta");
+        if (GoBack.WasPressedThisFrame()) menu.GoMenu();
+    }
+    
 }
 public static class GlobalData
 {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : Enemy
 {
@@ -10,5 +11,11 @@ public class Boss : Enemy
     public void SetIdleVisual() => bossRenderer.sprite = idleSprite;
     public void SetChargingVisual() => bossRenderer.sprite = chargingSprite;
     public void SetFiringVisual() => bossRenderer.sprite = firingSprite;
+
+    public override void Die()
+    {
+        
+        SceneManager.LoadScene("WinScene");
+    }
 
 }

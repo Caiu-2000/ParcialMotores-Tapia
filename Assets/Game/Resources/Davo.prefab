@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477444001041602721}
   - component: {fileID: 5988750016931965059}
+  - component: {fileID: 1590646907347625449}
   m_Layer: 0
   m_Name: CobraBase
   m_TagString: Untagged
@@ -87,6 +88,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1590646907347625449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337301423605379811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcf978a02b19742b17a030d41dfde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entity: {fileID: 1154741518403820889}
 --- !u!1 &2597669677795634972
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,9 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healtcomponent:
-    MaxHealth: 3
+    MaxHealth: 5
+    CdTime: 0.2
     CurrentHealth: 3
-  speed: 8
+  speed: 6
   bulletPrefab: {fileID: 6615566956458720108, guid: 5e0100fb9bf0e7b4cb7f61f0d04d8e1b, type: 3}
   bomb: {fileID: 6137374910689925409}
   power: 1
@@ -147,10 +162,10 @@ MonoBehaviour:
   SellectedBuild: 0
   BaseSprite: {fileID: 1021963298582083004, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   InvincibleSprite: {fileID: 3553923059935295675, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
-  BuffedSprite: {fileID: -5281111534082226694, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  BuffedSprite: {fileID: 3553923059935295675, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   PoolSize: 30
   characterRenderer: {fileID: 5988750016931965059}
-  FireTime: 0.1
+  FireTime: 0.2
 --- !u!58 &-4149240846498598222
 CircleCollider2D:
   m_ObjectHideFlags: 0
