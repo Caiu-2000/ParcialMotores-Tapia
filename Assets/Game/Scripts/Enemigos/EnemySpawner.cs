@@ -17,6 +17,9 @@ public class EnemySpawner : MonoBehaviour
     bool bossSpawned;
     int kills;
 
+    public static BulletPool mainPool;
+    [SerializeField]
+    Bullet bullet;
     private void Awake()
     {
         spawnTimerNotModified = spawnTimer;
@@ -49,6 +52,7 @@ public class EnemySpawner : MonoBehaviour
         int spawnPoint = Random.Range(0, spawnPositions.Length);
         Enemy enemy = enemyFactory[random].SpawnObject(spawnPositions[spawnPoint].position, Quaternion.identity);
         enemiesSpawned.Add(enemy);
+    
         yield return new WaitForSeconds(spawnTime);
         spawnReady = true;
     }
@@ -61,5 +65,10 @@ public class EnemySpawner : MonoBehaviour
             bossSpawned = true;
             enemiesSpawned.Add(tapia.SpawnObject(spawnPositions[0].position, Quaternion.identity));
         }
+    }
+
+    private void Start()
+    {
+        mainPool = new BulletPool(bullet, 40);
     }
 }

@@ -1110,9 +1110,10 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 23877972}
   spawnTimer: 4
-  killsToSpawnBoss: 15
+  killsToSpawnBoss: 10
   minSpawnTimer: 1
-  secondsToReachMinSpawnTimer: 60
+  secondsToReachMinSpawnTimer: 120
+  bullet: {fileID: 8373707314684792283, guid: 548b849cdbb04f5478a6ee62d2cbd5b9, type: 3}
 --- !u!4 &611758261
 Transform:
   m_ObjectHideFlags: 0
@@ -3584,7 +3585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1606156150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5029,7 +5030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 2058498604}
-  killsToSpawnBoss: 15
+  killsToSpawnBoss: 10
 --- !u!114 &2058498604
 MonoBehaviour:
   m_ObjectHideFlags: 0
