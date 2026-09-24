@@ -32,4 +32,9 @@ public class PauseManager : MonoBehaviour
     {
         ChangeGameState(GameState.Running);
     }
+
+    private void Start()
+    {
+        ChangeGameState(GameState.Running);
+    }
 }

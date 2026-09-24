@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour , IPoolable
 
     public void ReturnToPool(Action<IPoolable> returnaction)
     {
+        StopAllCoroutines();
         returnAction = returnaction;
     }
 
@@ -59,6 +60,8 @@ public class Bullet : MonoBehaviour , IPoolable
             {
                 return;
             }
+            if (who is Player && hittable is Player) return;
+            if(who is  Enemy && hittable is Enemy) return;
             DamageData data = new DamageData(1, who);
             hittable.OnHit(data);
             DisableBullet();

@@ -23,6 +23,8 @@ public class RunManager : MonoBehaviour
         RunTime = 0;
 
 
+        EventManager<GameEvent>.Publish<GameState>(GameEvent.GameResumed , GameState.Running);
+
         // Es un singletone raro por que se reemplaza siempre que puede
         if (instance != null) Destroy(instance);
         instance = this;

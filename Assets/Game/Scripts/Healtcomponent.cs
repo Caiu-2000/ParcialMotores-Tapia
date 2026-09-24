@@ -54,7 +54,7 @@ public class Healtcomponent : IObservable<HealthData> , ITimable
 
     public  void Die()
     {
-        SoundManager.instance.Play(SoundTypes.EnemyDead);
+        
 
         onDead?.Invoke();
     }

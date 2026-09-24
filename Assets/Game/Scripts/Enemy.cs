@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Enemy : Entity, ISpawnable
 {
@@ -22,10 +23,14 @@ public class Enemy : Entity, ISpawnable
         //debug
         OnCreated(muzzlePos.position, Quaternion.identity);
     }
+    private void OnEnable()
+    {
+      //  bulletPool = new BulletPool(bulletPrefab, bulletPoolSize);
+    }
     public void OnCreated(Vector3 position, Quaternion rotation)
     {
         transform.SetPositionAndRotation(position, rotation);
-        bulletPool = new BulletPool(bulletPrefab, bulletPoolSize);
+       
         foreach (AttackPatterns pattern in attackPatterns)
         {
             runtimePatterns.Add(Instantiate(pattern));
@@ -63,4 +68,6 @@ public class Enemy : Entity, ISpawnable
         SoundManager.instance.PlayPitched(SoundTypes.EnemyDead);
         base.Die();
     }
+
+
 }

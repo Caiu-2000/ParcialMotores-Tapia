@@ -17,7 +17,7 @@ public abstract class AttackPatterns : ScriptableObject, IShoot
     }
     protected void SpawnBullet(Vector3 dir)
     {
-        Bullet bullet = bulletPool.GetPrefab();
+        Bullet bullet = EnemySpawner.mainPool.GetPrefab();
         bullet.Spawned(muzzlePos.position);
         bullet.transform.up = dir;
         bullet.RestartBullet(owner);

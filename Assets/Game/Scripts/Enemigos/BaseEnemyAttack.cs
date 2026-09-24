@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class BaseEnemyAttack
 {
@@ -26,20 +27,19 @@ public class BaseEnemyAttack
             selectPattern = attacksPatterns.Count == 1 ? 0 : Random.Range(0, attacksPatterns.Count);
             firing = true;
         }
-    
+
         readyToShoot = attacksPatterns[selectPattern].Shoot();
-    
+
         if (readyToShoot == false)
         {
             cooldown = attackCooldown;
             firing = false;
         }
-        
+
     }
     public void UpdateTimer()
     {
         cooldown -= Time.deltaTime;
     }
-
 
 }
