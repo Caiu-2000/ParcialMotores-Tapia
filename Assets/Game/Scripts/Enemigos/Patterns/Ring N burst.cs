@@ -12,7 +12,7 @@ public class RingNburst : AttackPatterns
         for (int i = 0; i < bulletsPerCircle; i++)
         {
             float angleRad = Mathf.Rad2Deg * stepDeg * i;
-            Debug.Log(stepDeg * i);
+         
             Vector3 dir = new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad), 0f);
             SpawnBullet(dir);
         }

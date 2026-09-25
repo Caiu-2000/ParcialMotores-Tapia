@@ -94,7 +94,7 @@ public class SelectionManager : MonoBehaviour
 
     private void Update()
     {
-        print("se ejecuta");
+        
         if (GoBack.WasPressedThisFrame()) menu.GoMenu();
     }
     

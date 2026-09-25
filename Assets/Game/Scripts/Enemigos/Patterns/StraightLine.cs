@@ -20,7 +20,7 @@ public class StraightLine : AttackPatterns
     }
     public override bool Shoot()
     {
-        Debug.Log("Selected Straight");
+       
         return ShootBullets();
     }
 }

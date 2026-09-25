@@ -45,7 +45,7 @@ public class Gamemanager : MonoBehaviour
     }
     public IEnumerator count(float time, ITimable Caller)
     {
-        print("Se llamo manager  " + time);
+      
         yield return new WaitForSeconds(time);
         Caller.TimeStopped();
     }

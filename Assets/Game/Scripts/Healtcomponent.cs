@@ -36,6 +36,7 @@ public class Healtcomponent : IObservable<HealthData> , ITimable
     {
         if (onCD) return;
         CurrentHealth -= data.Damage;
+
         Gamemanager.instance.UniversalTimer(CdTime, this);
         onCD = true;
         if (CurrentHealth <= 0)

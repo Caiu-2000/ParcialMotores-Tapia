@@ -7,7 +7,7 @@ public class Enemy : Entity, ISpawnable
 {
     [SerializeField] Transform muzzlePos;
     [SerializeField] Bullet bulletPrefab;
-    [SerializeField] int bulletPoolSize = 20;
+ //   [SerializeField] int bulletPoolSize = 20;
     [SerializeField] int scoreValue = 100;
     [SerializeField] List<AttackPatterns> attackPatterns = new List<AttackPatterns> ();
     BulletPool bulletPool;
