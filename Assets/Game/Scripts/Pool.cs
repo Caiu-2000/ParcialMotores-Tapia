@@ -27,6 +27,7 @@ public abstract class Pool <T> where T : Component , IPoolable
 
     public T GetPrefab()
     {
+
         if (poolStack.Count > 0)
         {
             return poolStack.Pop();
@@ -38,6 +39,7 @@ public abstract class Pool <T> where T : Component , IPoolable
     {
      
         poolStack.Push(obj);
+        obj.gameObject.SetActive(false);
     }
     protected T Create()
     {

@@ -1,7 +1,7 @@
 
 using System;
 using System.Collections;
-using System.Threading;
+
 using UnityEngine;
 
 
@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour , IPoolable
     protected System.Action<IPoolable> returnAction;
     public void Spawned(Vector3 position)
     {
+        this.gameObject.SetActive(true);
         transform.rotation = Quaternion.identity;
         transform.position = position;
         StartCoroutine(DeleteTime());
@@ -31,6 +32,7 @@ public class Bullet : MonoBehaviour , IPoolable
     public void ReturnToPool(Action<IPoolable> returnaction)
     {
         StopAllCoroutines();
+            
         returnAction = returnaction;
     }
 
