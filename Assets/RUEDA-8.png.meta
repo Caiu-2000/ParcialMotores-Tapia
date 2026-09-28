@@ -1,0 +1,1521 @@
+fileFormatVersion: 2
+guid: 92180cadb1981384389f61283e47ca75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 972310042052984449
+    second: RUEDA-8_0
+  - first:
+      213: 8798288962689487506
+    second: RUEDA-8_1
+  - first:
+      213: -3224651667413648131
+    second: RUEDA-8_2
+  - first:
+      213: 6872609910402125442
+    second: RUEDA-8_3
+  - first:
+      213: 615531796268363159
+    second: RUEDA-8_4
+  - first:
+      213: -4947608062330731637
+    second: RUEDA-8_5
+  - first:
+      213: -1177212006418359794
+    second: RUEDA-8_6
+  - first:
+      213: -5004030173997042845
+    second: RUEDA-8_7
+  - first:
+      213: -3085973833587537084
+    second: RUEDA-8_8
+  - first:
+      213: 4042163090246237571
+    second: RUEDA-8_9
+  - first:
+      213: -3628394980209095287
+    second: RUEDA-8_10
+  - first:
+      213: -612785475649106498
+    second: RUEDA-8_11
+  - first:
+      213: 5210096649677242810
+    second: RUEDA-8_12
+  - first:
+      213: -316578908623800796
+    second: RUEDA-8_13
+  - first:
+      213: 1190792312386884458
+    second: RUEDA-8_14
+  - first:
+      213: 3528155799667735900
+    second: RUEDA-8_15
+  - first:
+      213: -5139238007518366674
+    second: RUEDA-8_16
+  - first:
+      213: 2045342151922269901
+    second: RUEDA-8_17
+  - first:
+      213: -3371034157697114986
+    second: RUEDA-8_18
+  - first:
+      213: 5510060851431138205
+    second: RUEDA-8_19
+  - first:
+      213: -6314290470837760194
+    second: RUEDA-8_20
+  - first:
+      213: 7681780606419119911
+    second: RUEDA-8_21
+  - first:
+      213: 1606574924843991056
+    second: RUEDA-8_22
+  - first:
+      213: 333660657017938537
+    second: RUEDA-8_23
+  - first:
+      213: -6286185932847617406
+    second: RUEDA-8_24
+  - first:
+      213: 775825146460643716
+    second: RUEDA-8_25
+  - first:
+      213: 252314276102389487
+    second: RUEDA-8_26
+  - first:
+      213: -2390824670058305251
+    second: RUEDA-8_27
+  - first:
+      213: -7891014343877991926
+    second: RUEDA-8_28
+  - first:
+      213: 8929597610580816652
+    second: RUEDA-8_29
+  - first:
+      213: -4743179296073077535
+    second: RUEDA-8_30
+  - first:
+      213: 651322454262225529
+    second: RUEDA-8_31
+  - first:
+      213: 2299897861530232477
+    second: RUEDA-8_32
+  - first:
+      213: 5204933900224776787
+    second: RUEDA-8_33
+  - first:
+      213: 7282132861079308156
+    second: RUEDA-8_34
+  - first:
+      213: -1946670895948099926
+    second: RUEDA-8_35
+  - first:
+      213: -2868398566095572733
+    second: RUEDA-8_36
+  - first:
+      213: -593419106750062257
+    second: RUEDA-8_37
+  - first:
+      213: 2546889515079644878
+    second: RUEDA-8_38
+  - first:
+      213: 1660397925469248113
+    second: RUEDA-8_39
+  - first:
+      213: -5317750742508114223
+    second: RUEDA-8_40
+  - first:
+      213: 1202534599654112762
+    second: RUEDA-8_41
+  - first:
+      213: 4405128614578232434
+    second: RUEDA-8_42
+  - first:
+      213: -2478140450229647992
+    second: RUEDA-8_43
+  - first:
+      213: -5695491842368614958
+    second: RUEDA-8_44
+  - first:
+      213: 3291379616415407501
+    second: RUEDA-8_45
+  - first:
+      213: -3524851788258186774
+    second: RUEDA-8_46
+  - first:
+      213: -1603907248087034242
+    second: RUEDA-8_47
+  - first:
+      213: -7913057335956797328
+    second: RUEDA-8_48
+  - first:
+      213: 8434724121700698039
+    second: RUEDA-8_49
+  - first:
+      213: 4918169955866984748
+    second: RUEDA-8_50
+  - first:
+      213: 4995301689664109121
+    second: RUEDA-8_51
+  - first:
+      213: -899300251434297614
+    second: RUEDA-8_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RUEDA-8_0
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1775
+        width: 229
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18efc1ce4d65e7d00800000000000000
+      internalID: 972310042052984449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1464
+        width: 253
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292d85c323dc91a70800000000000000
+      internalID: 8798288962689487506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_2
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1626
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc3077b46cbf33d0800000000000000
+      internalID: -3224651667413648131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_3
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1456
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e09550d4a606f50800000000000000
+      internalID: 6872609910402125442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_4
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1397
+        width: 166
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79da88058eeca8800800000000000000
+      internalID: 615531796268363159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_5
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1474
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b830bec4ea0965bb0800000000000000
+      internalID: -4947608062330731637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_6
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1473
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0adb14dae3b9afe0800000000000000
+      internalID: -1177212006418359794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_7
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1370
+        width: 144
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363f199b11d1e8ab0800000000000000
+      internalID: -5004030173997042845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_8
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1194
+        width: 125
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b4dd6062b6c25d0800000000000000
+      internalID: -3085973833587537084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_9
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1193
+        width: 134
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d725e0ae5a81830800000000000000
+      internalID: 4042163090246237571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_10
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1235
+        width: 112
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d83d35df955adc0800000000000000
+      internalID: -3628394980209095287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_11
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1261
+        width: 87
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd8a684bd2fe77f0800000000000000
+      internalID: -612785475649106498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_12
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1271
+        width: 82
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab107717c4bfd4840800000000000000
+      internalID: 5210096649677242810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_13
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1262
+        width: 84
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426f810f8294b9bf0800000000000000
+      internalID: -316578908623800796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_14
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1236
+        width: 110
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63161d8c4b868010800000000000000
+      internalID: 1190792312386884458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_15
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1193
+        width: 133
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dfd6fb10786f030800000000000000
+      internalID: 3528155799667735900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_16
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1169
+        width: 108
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e247ea1d242cda8b0800000000000000
+      internalID: -5139238007518366674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_17
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1075
+        width: 170
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dceb579b9d3826c10800000000000000
+      internalID: 2045342151922269901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_18
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1139
+        width: 156
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c51c84b4ea731d0800000000000000
+      internalID: -3371034157697114986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_19
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1138
+        width: 157
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93e65c962ba77c40800000000000000
+      internalID: 5510060851431138205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_20
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 1074
+        width: 172
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fc41575422f58a0800000000000000
+      internalID: -6314290470837760194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 908
+        width: 267
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fa81003ca2b9a60800000000000000
+      internalID: 7681780606419119911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_22
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 979
+        width: 119
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0104064d163bb4610800000000000000
+      internalID: 1606574924843991056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_23
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1029
+        width: 119
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962e319899661a400800000000000000
+      internalID: 333660657017938537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_24
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 979
+        width: 175
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a6f80233bf2c8a0800000000000000
+      internalID: -6286185932847617406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_25
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 914
+        width: 213
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4812a963cd844ca00800000000000000
+      internalID: 775825146460643716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_26
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 982
+        width: 175
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feeb7de4f76608300800000000000000
+      internalID: 252314276102389487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_27
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1022
+        width: 118
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d192fe431a512ded0800000000000000
+      internalID: -2390824670058305251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_28
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 977
+        width: 118
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02e3ab334c7d7290800000000000000
+      internalID: -7891014343877991926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_29
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 908
+        width: 268
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03b8dd37bd4ceb70800000000000000
+      internalID: 8929597610580816652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_30
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 937
+        width: 119
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eca3978f87dc2eb0800000000000000
+      internalID: -4743179296073077535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_31
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 882
+        width: 170
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a19804256f90900800000000000000
+      internalID: 651322454262225529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_32
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 884
+        width: 171
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96a0307be0eaef10800000000000000
+      internalID: 2299897861530232477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_33
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 929
+        width: 119
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a494a2ec3ab3840800000000000000
+      internalID: 5204933900224776787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_34
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 707
+        width: 108
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77c4d731455f0560800000000000000
+      internalID: 7282132861079308156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_35
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 792
+        width: 156
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae0c6052290cf4e0800000000000000
+      internalID: -1946670895948099926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_36
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 716
+        width: 134
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30132a993b66138d0800000000000000
+      internalID: -2868398566095572733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_37
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 651
+        width: 111
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41ab3b6770c3c7f0800000000000000
+      internalID: -593419106750062257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_38
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 651
+        width: 112
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec63d7c158e585320800000000000000
+      internalID: 2546889515079644878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_39
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 716
+        width: 134
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ad365bd1bea0710800000000000000
+      internalID: 1660397925469248113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_40
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 794
+        width: 157
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1deebb4dfdd8336b0800000000000000
+      internalID: -5317750742508114223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_41
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 703
+        width: 125
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdff7ad8d240b010800000000000000
+      internalID: 1202534599654112762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_42
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 550
+        width: 144
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c18d5b229222d30800000000000000
+      internalID: 4405128614578232434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_43
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 610
+        width: 85
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8850988e360eb9dd0800000000000000
+      internalID: -2478140450229647992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_44
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 597
+        width: 82
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddcb7a685c85f0b0800000000000000
+      internalID: -5695491842368614958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_45
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 611
+        width: 86
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dd66992545dad20800000000000000
+      internalID: 3291379616415407501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_46
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 540
+        width: 166
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae968fa59f5351fc0800000000000000
+      internalID: -3524851788258186774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_47
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 335
+        width: 242
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7619111bd6cdb9e0800000000000000
+      internalID: -1603907248087034242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_48
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 460
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0780ff2374c2f2290800000000000000
+      internalID: -7913057335956797328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_49
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 459
+        width: 86
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7836c46e82e0570800000000000000
+      internalID: 8434724121700698039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_50
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 321
+        width: 244
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21437c6489d04440800000000000000
+      internalID: 4918169955866984748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_51
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 306
+        width: 86
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a7656ab60e25540800000000000000
+      internalID: 4995301689664109121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RUEDA-8_52
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 3
+        width: 228
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6d6de9f2b0583f0800000000000000
+      internalID: -899300251434297614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RUEDA-8_0: 972310042052984449
+      RUEDA-8_1: 8798288962689487506
+      RUEDA-8_10: -3628394980209095287
+      RUEDA-8_11: -612785475649106498
+      RUEDA-8_12: 5210096649677242810
+      RUEDA-8_13: -316578908623800796
+      RUEDA-8_14: 1190792312386884458
+      RUEDA-8_15: 3528155799667735900
+      RUEDA-8_16: -5139238007518366674
+      RUEDA-8_17: 2045342151922269901
+      RUEDA-8_18: -3371034157697114986
+      RUEDA-8_19: 5510060851431138205
+      RUEDA-8_2: -3224651667413648131
+      RUEDA-8_20: -6314290470837760194
+      RUEDA-8_21: 7681780606419119911
+      RUEDA-8_22: 1606574924843991056
+      RUEDA-8_23: 333660657017938537
+      RUEDA-8_24: -6286185932847617406
+      RUEDA-8_25: 775825146460643716
+      RUEDA-8_26: 252314276102389487
+      RUEDA-8_27: -2390824670058305251
+      RUEDA-8_28: -7891014343877991926
+      RUEDA-8_29: 8929597610580816652
+      RUEDA-8_3: 6872609910402125442
+      RUEDA-8_30: -4743179296073077535
+      RUEDA-8_31: 651322454262225529
+      RUEDA-8_32: 2299897861530232477
+      RUEDA-8_33: 5204933900224776787
+      RUEDA-8_34: 7282132861079308156
+      RUEDA-8_35: -1946670895948099926
+      RUEDA-8_36: -2868398566095572733
+      RUEDA-8_37: -593419106750062257
+      RUEDA-8_38: 2546889515079644878
+      RUEDA-8_39: 1660397925469248113
+      RUEDA-8_4: 615531796268363159
+      RUEDA-8_40: -5317750742508114223
+      RUEDA-8_41: 1202534599654112762
+      RUEDA-8_42: 4405128614578232434
+      RUEDA-8_43: -2478140450229647992
+      RUEDA-8_44: -5695491842368614958
+      RUEDA-8_45: 3291379616415407501
+      RUEDA-8_46: -3524851788258186774
+      RUEDA-8_47: -1603907248087034242
+      RUEDA-8_48: -7913057335956797328
+      RUEDA-8_49: 8434724121700698039
+      RUEDA-8_5: -4947608062330731637
+      RUEDA-8_50: 4918169955866984748
+      RUEDA-8_51: 4995301689664109121
+      RUEDA-8_52: -899300251434297614
+      RUEDA-8_6: -1177212006418359794
+      RUEDA-8_7: -5004030173997042845
+      RUEDA-8_8: -3085973833587537084
+      RUEDA-8_9: 4042163090246237571
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

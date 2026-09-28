@@ -5,16 +5,20 @@ using UnityEngine.UI;
 public class BombFeedback : MonoBehaviour
 {
     [SerializeField] Texture[] Icons = new Texture[2];
-    protected RawImage image;
+    [SerializeField]protected RawImage image;
     private void Start()
     {
-        image = GetComponent<RawImage>();
+
         image.texture = Icons[(int)GlobalData.SelectedCharacter];
         EventManager<GameEvent>.Subscribe<int>(GameEvent.BombTroued, ShowSprite);
     }
 
-    public void ShowSprite(int x) => StartCoroutine(Show());
-    private IEnumerator Show()
+    public void ShowSprite(int x)
+    {
+       
+        StartCoroutine(Show());
+    }
+        private IEnumerator Show()
     {
         image.enabled = true;
         yield return new WaitForSeconds(0.25f);

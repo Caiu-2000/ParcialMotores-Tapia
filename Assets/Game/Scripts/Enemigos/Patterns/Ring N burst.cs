@@ -26,7 +26,7 @@ public class RingNburst : AttackPatterns
     }
     public override bool Shoot()
     {
-        Debug.Log("Selected Circle");
+        //Debug.Log("Selected Circle");
         return FireCircle();
     }
 }

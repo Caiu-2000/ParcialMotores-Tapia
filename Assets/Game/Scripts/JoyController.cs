@@ -57,7 +57,7 @@ public class JoyController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void SetPlayer(Player player)
     {
-        print("Se mando player");
+        //print("Se mando player");
         character = player;
     }
 
