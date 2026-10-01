@@ -3,6 +3,7 @@ using System;
 
 using UnityEngine;
 
+[DefaultExecutionOrder(5)]
 public class Entity : MonoBehaviour , IHittable
 {
     [SerializeField] protected Healtcomponent healtcomponent= new Healtcomponent();
@@ -18,4 +19,10 @@ public class Entity : MonoBehaviour , IHittable
     }
 
     public Healtcomponent getHealt() => healtcomponent;
+
+
+    internal virtual void BulletFired(Bullet bullet)
+    {
+        SoundManager.instance.PlayRandom(SoundTypes.FiredPlayer);
+    }
 }

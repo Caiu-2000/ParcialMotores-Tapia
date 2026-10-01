@@ -37,3 +37,9 @@ public enum InputEvents
 {
     BombPressed
 }
+
+public enum CombatEvents
+{
+    PlayerFired,
+    EnemyFired
+}

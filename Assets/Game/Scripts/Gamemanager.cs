@@ -18,6 +18,8 @@ public class Gamemanager : MonoBehaviour
 
     void Start()
     {
+       
+
         if (instance == null)
         {
             instance = this;
@@ -26,7 +28,12 @@ public class Gamemanager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+
+
+
+
     }
 
     public void PlayerDied()
@@ -49,6 +56,9 @@ public class Gamemanager : MonoBehaviour
         yield return new WaitForSeconds(time);
         Caller.TimeStopped();
     }
+
+ 
+
 }
 
 

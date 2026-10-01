@@ -1,11 +1,13 @@
 
-using System;
 using System.Collections;
 
 using UnityEngine;
 
 public class Player : Entity
 {
+
+    public static Player Instance { get; private set; }
+
     [SerializeField] float speed = 2.0f;
     [SerializeField] Bullet bulletPrefab;
  
@@ -38,6 +40,11 @@ public class Player : Entity
     public bool Buffed { private set; get; } = false;
     public bool invincible { private set; get; } = false;
 
+    [SerializeField] protected Sprite BulletSprite;
+    [SerializeField] protected Sprite SpecialBulletSprite;
+
+
+
 
     // Este mueve al personaje 
     public void Move(Vector2 dir)
@@ -56,6 +63,7 @@ public class Player : Entity
 
     private void Start()
     {
+        Instance = this;
         bulletPool = new BulletPool(bulletPrefab, PoolSize);
         StartCoroutine(FireRutine());
         EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
@@ -65,16 +73,26 @@ public class Player : Entity
     }
     private IEnumerator FireRutine()
     {
-        bool switchbullet = false;
+   
         while (true)
         {
-            SoundManager.instance.PlayRandom(SoundTypes.FiredPlayer);
+            
             Bullet bullet = bulletPool.GetPrefab();
-            bullet.RestartBullet(this , switchbullet , Buffed);
-            bullet.Spawned(this.transform.position);
-            switchbullet = !switchbullet;
+
+            Sprite currentSprite = Buffed ? SpecialBulletSprite : BulletSprite ;
+
+            bullet.Spawned(this.transform.position );
+            bullet.RestartBullet(this, BulletSprite);
+            BulletFired(bullet);
             yield return new WaitForSeconds(FireTime);
         }
+    }
+
+    internal override void BulletFired(Bullet bullet)
+    {
+        base.BulletFired(bullet);
+        EventManager<CombatEvents>.Publish<Bullet>(CombatEvents.PlayerFired, bullet);
+
     }
 
     // Con el eventmanager no se poner eventos sin valores asi que queda con variable x solo para poder pasar. Por eso no se usa

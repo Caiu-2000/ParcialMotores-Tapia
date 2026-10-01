@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
         int spawnPoint = Random.Range(0, spawnPositions.Length);
         Enemy enemy = enemyFactory[random].SpawnObject(spawnPositions[spawnPoint].position, Quaternion.identity);
         enemiesSpawned.Add(enemy);
-    
+        RunManager.instance.enemies.Add(enemy);
         yield return new WaitForSeconds(spawnTime);
         spawnReady = true;
     }

@@ -15,7 +15,7 @@ public class ramUsage : MonoBehaviour
     {
         if (instance == null) instance = this;
         else return;
-        DontDestroyOnLoad(this.gameObject);
+      
     }
 
     void Update()

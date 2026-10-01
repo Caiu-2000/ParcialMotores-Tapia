@@ -69,5 +69,9 @@ public class Enemy : Entity, ISpawnable
         base.Die();
     }
 
+    internal override void BulletFired(Bullet bullet)
+    {
+        EventManager<CombatEvents>.Publish(CombatEvents.EnemyFired, bullet);
+    }
 
 }
