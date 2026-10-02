@@ -61,7 +61,7 @@ public class BulletManager : IUpdatable
         for (int x = 0; x < BulletCount; x++)
         {
             currentBulelt = Bullets[x];
-            if (DoesItHit(Hittable , currentBulelt))
+            if (DoesItHit(Hittable , currentBulelt , "BulletManager"))
             {
                 currentBulelt.Hitted(Hittable);
                 RemoveFromList(x);
@@ -69,9 +69,14 @@ public class BulletManager : IUpdatable
         }
     }
 
-    public static bool DoesItHit( Entity entity , Bullet bullet)
+    public static bool DoesItHit( Entity entity , Bullet bullet , string whoCalled = " ")
     {
-        return ExtraMath.ScuareDistance(entity.transform.position, bullet.transform.position) < (bullet.size * bullet.size);
+        if (entity == null)
+        {
+      
+            return false;
+        }
+            return ExtraMath.ScuareDistance(entity.transform.position, bullet.transform.position) < ((entity.getSize() + bullet.size) * (entity.getSize() + bullet.size));
     }
 }
 
@@ -89,15 +94,19 @@ public class PlayerBulletManager : BulletManager
 
     protected override void CheckCollision()
     {
+    
         Bullet currentBulelt;
         for (int x = 0; x < BulletCount; x++)
         {
             currentBulelt = Bullets[x];
+          
             foreach (Enemy enemy in EnemyList)
             {
-                if (DoesItHit(enemy, currentBulelt))
+                
+                if (DoesItHit(enemy, currentBulelt, "PlayerBulletManager"))
                 {
-                    currentBulelt.Hitted(Hittable);
+                    
+                    currentBulelt.Hitted(enemy);
                     RemoveFromList(x);
                 }
             }

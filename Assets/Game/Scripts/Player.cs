@@ -3,6 +3,7 @@ using System.Collections;
 
 using UnityEngine;
 
+[DefaultExecutionOrder(15)]
 public class Player : Entity
 {
 
@@ -69,6 +70,8 @@ public class Player : Entity
         EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
         EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
         healtcomponent.onDead += deadHandling;
+
+        RunManager.instance.PlayerReady(this);
 
     }
     private IEnumerator FireRutine()

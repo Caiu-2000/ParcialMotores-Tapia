@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -53,19 +54,19 @@ public class RunManager : MonoBehaviour
             if (GoBack.WasPressedThisFrame()) pause.ChangeGameState(GameState.OnHold); 
 
        EnemyBulletManager.Update();
-        //PlayerBulletManager.Update();
+       PlayerBulletManager.Update();
 
 
     }
     
     protected void LoadLevel()
     {
-        EnemyBulletManager = new BulletManager(500, Player.Instance);
+ 
         PlayerBulletManager = new PlayerBulletManager(100, enemies);
 
 
         EventManager<CombatEvents>.Subscribe<Bullet>(CombatEvents.PlayerFired, PlayerBulletManager.AddToList);
-        EventManager<CombatEvents>.Subscribe<Bullet>(CombatEvents.EnemyFired, EnemyBulletManager.AddToList);
+        
 
 
 
@@ -78,5 +79,9 @@ public class RunManager : MonoBehaviour
         EventManager<CombatEvents>.Unsubscribe<Bullet>(CombatEvents.EnemyFired, EnemyBulletManager.AddToList);
     }
 
-
+    public  void PlayerReady(Player player)
+    {
+        EnemyBulletManager = new BulletManager(500, player);
+        EventManager<CombatEvents>.Subscribe<Bullet>(CombatEvents.EnemyFired, EnemyBulletManager.AddToList);
+    }
 }

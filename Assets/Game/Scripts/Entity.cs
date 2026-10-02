@@ -6,6 +6,7 @@ using UnityEngine;
 [DefaultExecutionOrder(5)]
 public class Entity : MonoBehaviour , IHittable
 {
+    [SerializeField] protected float size = 0.5f;
     [SerializeField] protected Healtcomponent healtcomponent= new Healtcomponent();
 
     public virtual void Die()
@@ -19,7 +20,7 @@ public class Entity : MonoBehaviour , IHittable
     }
 
     public Healtcomponent getHealt() => healtcomponent;
-
+    public float getSize() => size;
 
     internal virtual void BulletFired(Bullet bullet)
     {
