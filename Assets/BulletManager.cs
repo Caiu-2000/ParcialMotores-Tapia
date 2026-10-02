@@ -71,11 +71,6 @@ public class BulletManager : IUpdatable
 
     public static bool DoesItHit( Entity entity , Bullet bullet , string whoCalled = " ")
     {
-        if (entity == null)
-        {
-      
-            return false;
-        }
             return ExtraMath.ScuareDistance(entity.transform.position, bullet.transform.position) < ((entity.getSize() + bullet.size) * (entity.getSize() + bullet.size));
     }
 }
