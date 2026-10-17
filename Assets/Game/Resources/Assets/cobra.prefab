@@ -148,10 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2fb11855806b64fb92ed71dd1cfcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 0.5
   healtcomponent:
     MaxHealth: 8
     CdTime: 0.2
     CurrentHealth: 3
+  CharacterData: {fileID: 11400000, guid: ec11a055a64670e4d80fbebdee793480, type: 2}
   speed: 4
   bulletPrefab: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}
   bomb: {fileID: 4193967523205341458}

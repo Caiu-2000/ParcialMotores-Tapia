@@ -6,7 +6,7 @@ using UnityEngine;
 [DefaultExecutionOrder(15)]
 public class Player : Entity
 {
-
+    [SerializeField] CharacterStats CharacterData;
     public static Player Instance { get; private set; }
 
     [SerializeField] float speed = 2.0f;
@@ -27,9 +27,9 @@ public class Player : Entity
 
     
 
-    [SerializeField] protected Sprite BaseSprite;
-    [SerializeField] Sprite InvincibleSprite;
-    [SerializeField] Sprite BuffedSprite;
+    protected Sprite BaseSprite;
+    Sprite InvincibleSprite;
+    Sprite BuffedSprite;
 
     [SerializeField] int PoolSize = 1;
 
@@ -45,7 +45,7 @@ public class Player : Entity
     [SerializeField] protected Sprite SpecialBulletSprite;
 
 
-
+    Skinset currentSet;
 
     // Este mueve al personaje 
     public void Move(Vector2 dir)
@@ -72,6 +72,11 @@ public class Player : Entity
         healtcomponent.onDead += deadHandling;
 
         RunManager.instance.PlayerReady(this);
+
+
+        currentSet  = CharacterData.Skins[GlobalManager.CurrentCharacterSkinIndex];
+        characterRenderer.sprite = currentSet.NormalSprite;
+
 
     }
     private IEnumerator FireRutine()
@@ -130,9 +135,9 @@ public class Player : Entity
 
     private void Update()
     {
-        if (invincible) characterRenderer.sprite = InvincibleSprite;
-        else if (Buffed) characterRenderer.sprite = BuffedSprite;
-        else characterRenderer.sprite = BaseSprite;
+        if (invincible) characterRenderer.sprite = currentSet.InvincibleSprite; 
+        else if (Buffed) characterRenderer.sprite = currentSet.BuffedSprite; 
+        else characterRenderer.sprite = currentSet.NormalSprite;
     }
     public override void OnHit(DamageData data)
     {
@@ -158,4 +163,7 @@ public class Player : Entity
     {
         Gamemanager.instance.PlayerDied();
     }
+
+
+
 }

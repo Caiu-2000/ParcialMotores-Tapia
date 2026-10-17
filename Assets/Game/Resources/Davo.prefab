@@ -148,10 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2fb11855806b64fb92ed71dd1cfcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 0.5
   healtcomponent:
     MaxHealth: 5
     CdTime: 0.2
     CurrentHealth: 3
+  CharacterData: {fileID: 11400000, guid: cea94fdd8b1472844910f61c5568b1d1, type: 2}
   speed: 6
   bulletPrefab: {fileID: 6615566956458720108, guid: 5e0100fb9bf0e7b4cb7f61f0d04d8e1b, type: 3}
   bomb: {fileID: 6137374910689925409}
@@ -166,6 +168,8 @@ MonoBehaviour:
   PoolSize: 20
   characterRenderer: {fileID: 5988750016931965059}
   FireTime: 0.2
+  BulletSprite: {fileID: 0}
+  SpecialBulletSprite: {fileID: 0}
 --- !u!58 &-4149240846498598222
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public abstract class AttackPatterns : ScriptableObject, IShoot
         bullet.transform.up = dir;
         bullet.RestartBullet(owner);
 
+
         // Esto la agregue yo para que se llame bien el evento que suma la bala
         owner.BulletFired(bullet);
        

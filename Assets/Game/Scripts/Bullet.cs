@@ -17,6 +17,8 @@ public class Bullet : MonoBehaviour , IPoolable
     public float TimeLimit;
     public float size = 0.1f;
 
+
+    
     public void Spawned(Vector3 position)
     {
         this.gameObject.SetActive(true);
@@ -47,7 +49,7 @@ public class Bullet : MonoBehaviour , IPoolable
     public void Hitted(Entity hitted)
     {
         hitted.OnHit(new DamageData(1, who));
-        DisableBullet();
+        //DisableBullet();
     }
 
     protected virtual void OnDrawGizmos()
@@ -59,4 +61,15 @@ public class Bullet : MonoBehaviour , IPoolable
 
     public Entity fromWho() => who;
 
+    public virtual void Move()
+    {
+        transform.position += transform.up * Speed * Time.deltaTime;
+    }
+}
+
+public enum MoveType
+{
+    Straight,
+    Sinusoidal
+    
 }

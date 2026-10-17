@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
@@ -30,13 +31,14 @@ public class BulletManager : IUpdatable
     protected void UpdateMovement()
     {
         Bullet currentBullet;
-        for (int x = 0; x < BulletCount; x++)
+        for (int x = 0; x <= BulletCount; x++)
         {
             currentBullet = Bullets[x];
 
             if (Time.time > currentBullet.TimeLimit) RemoveFromList(x);
- 
-            currentBullet.transform.position += currentBullet.transform.up * currentBullet.Speed * Time.deltaTime;
+
+            currentBullet.Move();
+            
         }
     }
     protected void RemoveFromList(int index)
@@ -94,19 +96,41 @@ public class PlayerBulletManager : BulletManager
         for (int x = 0; x < BulletCount; x++)
         {
             currentBulelt = Bullets[x];
-          
+            CheckIfDuped(currentBulelt);
             foreach (Enemy enemy in EnemyList)
             {
-                
+                if (enemy == null) continue;
+
                 if (DoesItHit(enemy, currentBulelt, "PlayerBulletManager"))
                 {
-                    
-                    currentBulelt.Hitted(enemy);
                     RemoveFromList(x);
+                    currentBulelt.Hitted(enemy);
+                    
                 }
             }
         }
     }
+
+
+    private void CheckIfDuped(Bullet bullet)
+    {
+        bool Checked = false;
+        for (int x = 0; x < BulletCount; x++)
+        {
+            if (Bullets[x] == bullet)
+            {
+                if (!Checked)
+                {
+                    Checked = true;
+                    continue;
+                }
+            
+                Debug.LogError("Bullet esta duplicado  " + this);
+                
+            }
+        }
+    }
+
 }
 
 
@@ -117,3 +141,39 @@ public interface IUpdatable
 {
     void Update();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

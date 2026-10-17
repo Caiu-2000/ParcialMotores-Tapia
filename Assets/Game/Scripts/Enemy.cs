@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System;
+
 
 public class Enemy : Entity, ISpawnable
 {
     [SerializeField] Transform muzzlePos;
     [SerializeField] Bullet bulletPrefab;
- //   [SerializeField] int bulletPoolSize = 20;
+    [SerializeField] int bulletPoolSize = 20;
     [SerializeField] int scoreValue = 100;
     [SerializeField] List<AttackPatterns> attackPatterns = new List<AttackPatterns> ();
     BulletPool bulletPool;
@@ -20,17 +20,16 @@ public class Enemy : Entity, ISpawnable
     private void Awake()
     {
         healtcomponent.onDead += Die;
-        //debug
+        
         OnCreated(muzzlePos.position, Quaternion.identity);
-    }
-    private void OnEnable()
-    {
-      //  bulletPool = new BulletPool(bulletPrefab, bulletPoolSize);
     }
     public void OnCreated(Vector3 position, Quaternion rotation)
     {
         transform.SetPositionAndRotation(position, rotation);
-       
+        if (bulletPool == null)
+        {
+            bulletPool = new BulletPool(bulletPrefab, bulletPoolSize);
+        }
         foreach (AttackPatterns pattern in attackPatterns)
         {
             runtimePatterns.Add(Instantiate(pattern));
@@ -64,8 +63,18 @@ public class Enemy : Entity, ISpawnable
     public override void Die()
     {
         EventManager<GameEvent>.Publish<int>(GameEvent.AddPoints, scoreValue);
-        EventManager<GameEvent>.Publish<int>(GameEvent.EnemyKilled, 1);
+        EventManager<GameEvent>.Publish<Enemy>(GameEvent.EnemyKilled, this);
         SoundManager.instance.PlayPitched(SoundTypes.EnemyDead);
+
+        /// TODO MUY IMPORTANTE 
+        /// AHORA MISMO EL POOL DEL ENEMIGO SE BORRA JUNTO CON EL ENEMIGO 
+        /// TENDRIAMOS QUE USAR UN BUILDER PROTOTYPE PARA USAR UN SOLO POOL DE BALAS Y QUE EL ENEMIGO LAS MODIFIQUE AL DISPARARLAS
+        /// O COMO SE TE OCURRA A VOS PERO ESTO NO VA A SERVIR
+
+        // Esto hace un while que borra una por una las balas
+        bulletPool.EmtpyPool();
+
+
         base.Die();
     }
 

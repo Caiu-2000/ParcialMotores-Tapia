@@ -68,9 +68,6 @@ public class RunManager : MonoBehaviour
         EventManager<CombatEvents>.Subscribe<Bullet>(CombatEvents.PlayerFired, PlayerBulletManager.AddToList);
         
 
-
-
-
     }
 
     private void OnDisable()

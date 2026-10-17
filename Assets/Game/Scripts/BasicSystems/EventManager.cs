@@ -52,7 +52,7 @@ public static class EventManager<TEvent>
         }
         else
         {
-            throw new InvalidOperationException("No se encontro");
+            throw new InvalidOperationException("No se encontro  " + eventType.ToString());
         }
     }
 }
