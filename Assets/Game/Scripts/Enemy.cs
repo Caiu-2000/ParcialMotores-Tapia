@@ -15,7 +15,7 @@ public class Enemy : Entity, ISpawnable
     BaseEnemyAttack enemyAttack;
     List<AttackPatterns> runtimePatterns = new List<AttackPatterns> ();
 
-
+    [SerializeField] int MoneyValue = 10;
     bool shootReady = true;
     private void Awake()
     {
@@ -74,7 +74,7 @@ public class Enemy : Entity, ISpawnable
         // Esto hace un while que borra una por una las balas
         bulletPool.EmtpyPool();
 
-
+        GlobalData.Addmoney(MoneyValue);
         base.Die();
     }
 

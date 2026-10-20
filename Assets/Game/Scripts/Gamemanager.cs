@@ -32,7 +32,7 @@ public class Gamemanager : MonoBehaviour
         }
 
 
-
+        GlobalData.Load();
 
     }
 
@@ -57,7 +57,11 @@ public class Gamemanager : MonoBehaviour
         Caller.TimeStopped();
     }
 
- 
+
+    private void OnApplicationQuit()
+    {
+        SaveManager.Save();
+    }
 
 }
 

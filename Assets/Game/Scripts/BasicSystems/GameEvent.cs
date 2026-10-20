@@ -5,23 +5,19 @@ public enum GameEvent
     StopGame,
     
     AddPoints,
-    RestPoints,
-
-    PointsChanged,
 
     EnemyKilled, 
     BossProgress,
 
-    HealthChanged,
-    HealPlayer,
     DamagePlayer,
     
     GameStateChanged,
 
     BombTroued,
     GamePaused,
-    GameResumed
-
+    GameResumed,
+   
+    MoneyChanged
 }
 
 // En caso de agregar una pausa iria aca 

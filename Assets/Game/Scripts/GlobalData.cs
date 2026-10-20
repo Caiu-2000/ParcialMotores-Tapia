@@ -10,7 +10,7 @@ public static class GlobalData
     public static Dificltys CurrentDificulty = Dificltys.EASY;
     public static CharacterNames SelectedCharacter;
     
-    static void Load()
+    public static void Load()
     {
         CurrentMoney = SaveManager.GetSavedMoney();
         SkinsCobra = SaveManager.GetSavedSkins(CharacterNames.Cobra);
@@ -18,7 +18,16 @@ public static class GlobalData
     }
 
 
-
+    public static void Addmoney(int amount)
+    {
+        CurrentMoney += amount;
+        EventManager<GameEvent>.Publish<int>(GameEvent.MoneyChanged, CurrentMoney);
+    }
+    public static void RemoveMoney(int amount)
+    {
+        CurrentMoney -= amount;
+        EventManager<GameEvent>.Publish<int>(GameEvent.MoneyChanged, CurrentMoney);
+    }
 
 
 
