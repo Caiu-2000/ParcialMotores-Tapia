@@ -25,3 +25,6 @@ MonoBehaviour:
   BulletsExample: {fileID: 405759997751498836, guid: 6f534a1ff88afc6489f9f55391fe17af, type: 3}
   bullet: {fileID: 0}
   bomb: {fileID: 0}
+  Skins:
+  - {fileID: 11400000, guid: d4171ecd0f1111b47a2125abf52697c0, type: 2}
+  - {fileID: 11400000, guid: 88132423585194c4b92abc638fbc3c39, type: 2}

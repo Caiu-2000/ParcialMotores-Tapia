@@ -25,7 +25,7 @@ public class SWave : AttackPatterns
     }
     public override bool Shoot()
     {
-        Debug.Log("Selected SWave");
+        //Debug.Log("Selected SWave");
         return FireWave();
     }
 }

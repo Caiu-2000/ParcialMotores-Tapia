@@ -26,11 +26,11 @@ public class EnemySpawner : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventManager<GameEvent>.Subscribe<int>(GameEvent.EnemyKilled, OnEnemyKilled);
+        EventManager<GameEvent>.Subscribe<Enemy>(GameEvent.EnemyKilled, OnEnemyKilled);
     }
     private void OnDisable()
     {
-        EventManager<GameEvent>.Unsubscribe<int>(GameEvent.EnemyKilled, OnEnemyKilled);
+        EventManager<GameEvent>.Unsubscribe<Enemy>(GameEvent.EnemyKilled, OnEnemyKilled);
     }
     private void Update()
     {
@@ -52,23 +52,30 @@ public class EnemySpawner : MonoBehaviour
         int spawnPoint = Random.Range(0, spawnPositions.Length);
         Enemy enemy = enemyFactory[random].SpawnObject(spawnPositions[spawnPoint].position, Quaternion.identity);
         enemiesSpawned.Add(enemy);
-    
+        RunManager.instance.enemies.Add(enemy);
         yield return new WaitForSeconds(spawnTime);
         spawnReady = true;
     }
-    private void OnEnemyKilled(int x)
+    private void OnEnemyKilled(Enemy enemy)
     {
         kills++;
+        
         EventManager<GameEvent>.Publish<int>(GameEvent.BossProgress, kills);
+        
+        enemiesSpawned.RemoveAt(enemiesSpawned.IndexOf(enemy));
         if (kills >= killsToSpawnBoss && bossSpawned == false)
         {
             bossSpawned = true;
             enemiesSpawned.Add(tapia.SpawnObject(spawnPositions[0].position, Quaternion.identity));
         }
+      
     }
 
     private void Start()
     {
-        mainPool = new BulletPool(bullet, 40);
+        mainPool = new BulletPool(bullet, 500);
     }
+
+
+
 }

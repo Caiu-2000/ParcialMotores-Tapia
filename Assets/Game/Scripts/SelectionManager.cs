@@ -94,15 +94,10 @@ public class SelectionManager : MonoBehaviour
 
     private void Update()
     {
-        print("se ejecuta");
+        
         if (GoBack.WasPressedThisFrame()) menu.GoMenu();
     }
     
-}
-public static class GlobalData
-{
-    public static Dificltys CurrentDificulty = Dificltys.EASY;
-    public static CharacterNames SelectedCharacter;
 }
 
 public enum Dificltys

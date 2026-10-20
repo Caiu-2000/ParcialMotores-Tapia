@@ -1,11 +1,14 @@
 
-using System;
 using System.Collections;
 
 using UnityEngine;
 
+[DefaultExecutionOrder(15)]
 public class Player : Entity
 {
+    [SerializeField] CharacterStats CharacterData;
+    public static Player Instance { get; private set; }
+
     [SerializeField] float speed = 2.0f;
     [SerializeField] Bullet bulletPrefab;
  
@@ -24,9 +27,9 @@ public class Player : Entity
 
     
 
-    [SerializeField] protected Sprite BaseSprite;
-    [SerializeField] Sprite InvincibleSprite;
-    [SerializeField] Sprite BuffedSprite;
+    protected Sprite BaseSprite;
+    Sprite InvincibleSprite;
+    Sprite BuffedSprite;
 
     [SerializeField] int PoolSize = 1;
 
@@ -38,6 +41,11 @@ public class Player : Entity
     public bool Buffed { private set; get; } = false;
     public bool invincible { private set; get; } = false;
 
+    [SerializeField] protected Sprite BulletSprite;
+    [SerializeField] protected Sprite SpecialBulletSprite;
+
+
+    Skinset currentSet;
 
     // Este mueve al personaje 
     public void Move(Vector2 dir)
@@ -56,25 +64,43 @@ public class Player : Entity
 
     private void Start()
     {
+        Instance = this;
         bulletPool = new BulletPool(bulletPrefab, PoolSize);
         StartCoroutine(FireRutine());
         EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
         EventManager<GameEvent>.Publish<int>(GameEvent.BombTroued, bombCuantity);
         healtcomponent.onDead += deadHandling;
 
+        RunManager.instance.PlayerReady(this);
+
+
+        currentSet  = CharacterData.Skins[GlobalData.CurrentCharacterSkinIndex];
+        characterRenderer.sprite = currentSet.NormalSprite;
+
+
     }
     private IEnumerator FireRutine()
     {
-        bool switchbullet = false;
+   
         while (true)
         {
-            SoundManager.instance.PlayRandom(SoundTypes.FiredPlayer);
+            
             Bullet bullet = bulletPool.GetPrefab();
-            bullet.RestartBullet(this , switchbullet , Buffed);
-            bullet.Spawned(this.transform.position);
-            switchbullet = !switchbullet;
+
+            Sprite currentSprite = Buffed ? SpecialBulletSprite : BulletSprite ;
+
+            bullet.Spawned(this.transform.position );
+            bullet.RestartBullet(this, BulletSprite);
+            BulletFired(bullet);
             yield return new WaitForSeconds(FireTime);
         }
+    }
+
+    internal override void BulletFired(Bullet bullet)
+    {
+        base.BulletFired(bullet);
+        EventManager<CombatEvents>.Publish<Bullet>(CombatEvents.PlayerFired, bullet);
+
     }
 
     // Con el eventmanager no se poner eventos sin valores asi que queda con variable x solo para poder pasar. Por eso no se usa
@@ -109,9 +135,9 @@ public class Player : Entity
 
     private void Update()
     {
-        if (invincible) characterRenderer.sprite = InvincibleSprite;
-        else if (Buffed) characterRenderer.sprite = BuffedSprite;
-        else characterRenderer.sprite = BaseSprite;
+        if (invincible) characterRenderer.sprite = currentSet.InvincibleSprite; 
+        else if (Buffed) characterRenderer.sprite = currentSet.BuffedSprite; 
+        else characterRenderer.sprite = currentSet.NormalSprite;
     }
     public override void OnHit(DamageData data)
     {
@@ -137,4 +163,7 @@ public class Player : Entity
     {
         Gamemanager.instance.PlayerDied();
     }
+
+
+
 }

@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
+
 
 [CreateAssetMenu(fileName = "CharacterStats", menuName = "Scriptable Objects/CharacterStats")]
 public class CharacterStats : ScriptableObject
@@ -27,4 +27,8 @@ public class CharacterStats : ScriptableObject
 
     public Bomb bomb;
 
+
+    public Skinset[] Skins;
+
 }
+

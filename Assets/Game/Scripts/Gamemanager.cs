@@ -18,6 +18,8 @@ public class Gamemanager : MonoBehaviour
 
     void Start()
     {
+       
+
         if (instance == null)
         {
             instance = this;
@@ -26,7 +28,12 @@ public class Gamemanager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+
+
+
+
     }
 
     public void PlayerDied()
@@ -45,10 +52,13 @@ public class Gamemanager : MonoBehaviour
     }
     public IEnumerator count(float time, ITimable Caller)
     {
-        print("Se llamo manager  " + time);
+      
         yield return new WaitForSeconds(time);
         Caller.TimeStopped();
     }
+
+ 
+
 }
 
 

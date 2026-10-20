@@ -23,7 +23,7 @@ public class Spiralpattern : AttackPatterns
 
     public override bool Shoot()
     {
-        Debug.Log("Selected Spiral");
+       // Debug.Log("Selected Spiral");
         return FireSpiral();
     }
 }
