@@ -99,11 +99,6 @@ public class SelectionManager : MonoBehaviour
     }
     
 }
-public static class GlobalData
-{
-    public static Dificltys CurrentDificulty = Dificltys.EASY;
-    public static CharacterNames SelectedCharacter;
-}
 
 public enum Dificltys
 {

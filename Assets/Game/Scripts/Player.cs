@@ -74,7 +74,7 @@ public class Player : Entity
         RunManager.instance.PlayerReady(this);
 
 
-        currentSet  = CharacterData.Skins[GlobalManager.CurrentCharacterSkinIndex];
+        currentSet  = CharacterData.Skins[GlobalData.CurrentCharacterSkinIndex];
         characterRenderer.sprite = currentSet.NormalSprite;
 
 
