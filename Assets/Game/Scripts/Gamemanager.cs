@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+    using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
+[DefaultExecutionOrder(-100)]
 public class Gamemanager : MonoBehaviour
 {
     public static Gamemanager instance { get; private set; }
