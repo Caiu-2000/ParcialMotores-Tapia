@@ -8,6 +8,7 @@ public class StoreManager : MonoBehaviour
 
     [SerializeField] StoreItem ItemPrefab;
 
+    [SerializeField] GameObject margin;
 
 
 
@@ -36,6 +37,7 @@ public class StoreManager : MonoBehaviour
     {
         foreach (Transform child in ItemsHolder.transform)
         {
+            if (child.gameObject == margin) continue;
             Destroy(child.gameObject);
         }
     }
