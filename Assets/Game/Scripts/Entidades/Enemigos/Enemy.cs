@@ -9,18 +9,18 @@ public class Enemy : Entity, ISpawnable
     [SerializeField] Bullet bulletPrefab;
     [SerializeField] int bulletPoolSize = 20;
     [SerializeField] int scoreValue = 100;
-    [SerializeField] List<AttackPatterns> attackPatterns = new List<AttackPatterns> ();
+    [SerializeField] List<AttackPatterns> attackPatterns = new List<AttackPatterns>();
     BulletPool bulletPool;
     BaseEnemyMovement enemyMovement;
     BaseEnemyAttack enemyAttack;
-    List<AttackPatterns> runtimePatterns = new List<AttackPatterns> ();
+    List<AttackPatterns> runtimePatterns = new List<AttackPatterns>();
+    public bool isBoss;
 
-    [SerializeField] int MoneyValue = 10;
     bool shootReady = true;
     private void Awake()
     {
         healtcomponent.onDead += Die;
-        
+
         OnCreated(muzzlePos.position, Quaternion.identity);
     }
     public void OnCreated(Vector3 position, Quaternion rotation)
@@ -59,13 +59,16 @@ public class Enemy : Entity, ISpawnable
         if (data.FromWho is Player) base.OnHit(data);
 
     }
-
+    public void SetBoss()
+    {
+        isBoss = true;
+    }
     public override void Die()
     {
         EventManager<GameEvent>.Publish<int>(GameEvent.AddPoints, scoreValue);
         EventManager<GameEvent>.Publish<Enemy>(GameEvent.EnemyKilled, this);
         SoundManager.instance.PlayPitched(SoundTypes.EnemyDead);
-
+        if (isBoss) EventManager<GameEvent>.Publish(GameEvent.MidBossKilled, this);
         /// TODO MUY IMPORTANTE 
         /// AHORA MISMO EL POOL DEL ENEMIGO SE BORRA JUNTO CON EL ENEMIGO 
         /// TENDRIAMOS QUE USAR UN BUILDER PROTOTYPE PARA USAR UN SOLO POOL DE BALAS Y QUE EL ENEMIGO LAS MODIFIQUE AL DISPARARLAS
@@ -74,7 +77,7 @@ public class Enemy : Entity, ISpawnable
         // Esto hace un while que borra una por una las balas
         bulletPool.EmtpyPool();
 
-        GlobalData.Addmoney(MoneyValue);
+
         base.Die();
     }
 

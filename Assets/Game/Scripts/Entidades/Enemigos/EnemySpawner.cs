@@ -4,82 +4,100 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    //--------------Enemy Factories---------------//
     [SerializeField] EnemyFactory[] enemyFactory;
     [SerializeField] EnemyFactory tapia;
+    [SerializeField] EnemyFactory yuuki;
+    [SerializeField] EnemyFactory riquelme;
     [SerializeField] Transform[] spawnPositions;
+    //-----------------Bullets-------------------//
+    public static BulletPool mainPool;
+    [SerializeField]  Bullet bullet;
+    //-----------------Settings------------------//
     [SerializeField] float spawnTimer = 7.5f;
-    [SerializeField] int killsToSpawnBoss;
-    float spawnTimerNotModified;
     [SerializeField] float minSpawnTimer = 2f;
     [SerializeField, Range(60, 120)] float secondsToReachMinSpawnTimer = 120f;
-    bool spawnReady = true;
+    [SerializeField] int killsToSpawnBoss;
+    [SerializeField] int killsToSpawnMidBoss; //GET THE REJUVENATOR
+    //---------------Private vars--------------//
     List<Enemy> enemiesSpawned = new List<Enemy>();
+    float startInterval;
+    float elapsed;
+    float cooldwon;
+    bool spawnReady = true;
     bool bossSpawned;
+    bool midBossSpawned;
     int kills;
-
-    public static BulletPool mainPool;
-    [SerializeField]
-    Bullet bullet;
+    
+    int NextTarget => midBossSpawned ? killsToSpawnBoss : killsToSpawnMidBoss;
+    bool EnoughAliveToReachTarget => kills + enemiesSpawned.Count >= NextTarget;
+    
     private void Awake()
     {
-        spawnTimerNotModified = spawnTimer;
+        startInterval = spawnTimer;
+        mainPool = new BulletPool(bullet, 500);
     }
     private void OnEnable()
     {
         EventManager<GameEvent>.Subscribe<Enemy>(GameEvent.EnemyKilled, OnEnemyKilled);
+        EventManager<GameEvent>.Subscribe<Enemy>(GameEvent.MidBossKilled, MidbossKilled);
     }
     private void OnDisable()
     {
         EventManager<GameEvent>.Unsubscribe<Enemy>(GameEvent.EnemyKilled, OnEnemyKilled);
+        EventManager<GameEvent>.Unsubscribe<Enemy>(GameEvent.MidBossKilled, MidbossKilled);
     }
     private void Update()
     {
+        elapsed += Time.deltaTime;
         if (bossSpawned) return;
-        if (spawnReady == false) return;
-        StartCoroutine(SpawnEnemy(spawnTimer));
-        LinearRampUp();
+        cooldwon -= Time.deltaTime;
+        if(cooldwon > 0) return;
+        if (EnoughAliveToReachTarget) return;
+        Spawn(enemyFactory[Random.Range(0, enemyFactory.Length)], RandomSpawnPoint());
+        cooldwon = CurrentInterval();
     }
-    private void LinearRampUp()
+
+    Vector3 RandomSpawnPoint()
     {
-        float linearFunctionSlope = (minSpawnTimer - spawnTimerNotModified) / secondsToReachMinSpawnTimer;// M = (Y2-Y1)/(X2-X1)
-        float possibleSpawnTimer = linearFunctionSlope * Time.time + spawnTimerNotModified; //Y = mx+b
-        spawnTimer = Mathf.Max(minSpawnTimer, possibleSpawnTimer);
+        return spawnPositions[Random.Range(0, spawnPositions.Length)].position;
     }
-    IEnumerator SpawnEnemy(float spawnTime)
+       
+    Enemy Spawn(EnemyFactory factory, Vector3 position)
     {
-        int random = enemyFactory.Length == 1 ? 0 : Random.Range(0, enemyFactory.Length);
-        spawnReady = false;
-        int spawnPoint = Random.Range(0, spawnPositions.Length);
-        Enemy enemy = enemyFactory[random].SpawnObject(spawnPositions[spawnPoint].position, Quaternion.identity);
+        Enemy enemy = factory.SpawnObject(position, Quaternion.identity);
         enemiesSpawned.Add(enemy);
         RunManager.instance.enemies.Add(enemy);
-        yield return new WaitForSeconds(spawnTime);
-        spawnReady = true;
+        return enemy;
     }
-    private void OnEnemyKilled(Enemy enemy)
+
+    float CurrentInterval()
+    {
+        float t = Mathf.Clamp01(elapsed/secondsToReachMinSpawnTimer);
+        return Mathf.Lerp(startInterval, minSpawnTimer, t);
+    }
+    void OnEnemyKilled(Enemy enemy)
     {
         kills++;
-        
+        enemiesSpawned.Remove(enemy);
         EventManager<GameEvent>.Publish<int>(GameEvent.BossProgress, kills);
-        
-        enemiesSpawned.RemoveAt(enemiesSpawned.IndexOf(enemy));
-        if (kills >= killsToSpawnBoss && bossSpawned == false)
+
+        if (!midBossSpawned && kills >= killsToSpawnMidBoss)
+        {
+            midBossSpawned = true;
+            bossSpawned = true;
+            var factory = GlobalData.SelectedCharacter == CharacterNames.Cobra ? yuuki : riquelme;
+            Spawn(factory, spawnPositions[0].position).SetBoss();
+        }
+        else if (midBossSpawned && !bossSpawned && kills >= killsToSpawnBoss)
         {
             bossSpawned = true;
-            // Lo cambie un poco para que sse agregue tapia a la lista de enemigos chequeables para los bulletmanagers
-
-            var tapiains = tapia.SpawnObject(spawnPositions[0].position, Quaternion.identity);
-            enemiesSpawned.Add(tapiains);
-            RunManager.instance.enemies.Add(tapiains);
+            Spawn(tapia, spawnPositions[0].position);
         }
-      
     }
-
-    private void Start()
+    void MidbossKilled(Enemy enemy)
     {
-        mainPool = new BulletPool(bullet, 500);
+        bossSpawned = false;
+
     }
-
-
-
 }
