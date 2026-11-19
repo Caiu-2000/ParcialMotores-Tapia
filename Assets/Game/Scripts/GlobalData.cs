@@ -10,6 +10,7 @@ public static class GlobalData
 
     public static int CurrentCharacterSkinIndex { get; set; } = 0;
     public static int CurrentMoney { get; set; } = 0;
+    public static int Stamina { get; set; } = 100;
 
   
 
@@ -23,6 +24,7 @@ public static class GlobalData
     {
         SkinsDavo.Clear();
         CurrentMoney = SaveManager.GetSavedMoney();
+        Stamina = SaveManager.GetSavedStamina();
         // SkinsCobraSave = SaveManager.GetSavedSkins(CharacterNames.Cobra);
         IsLoaded = true;
         SkinsDavo = GenerateSkinList(SaveManager.GetSavedSkins(CharacterNames.Davo));
@@ -79,7 +81,16 @@ public static class GlobalData
         CurrentMoney -= amount;
         EventManager<GameEvent>.Publish<int>(GameEvent.MoneyChanged, CurrentMoney);
     }
-
+    public static void AddStamina(int amount)
+    {
+        Stamina = Mathf.Clamp(Stamina + amount, 0, 100);
+        Debug.Log($"Current Stamina: {Stamina}");
+    }
+    public static void RemoveStamina(int amount)
+    {
+        Stamina = Mathf.Clamp(Stamina - amount, 0, 100);
+        Debug.Log($"Current Stamina: {Stamina}");
+    }
 }
 
 

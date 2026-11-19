@@ -82,6 +82,8 @@ public class SelectionManager : MonoBehaviour
 
     public void PlayPressed()
     {
+        GlobalData.RemoveStamina(20);
+        SaveManager.SaveStamina();
         GlobalData.SelectedCharacter = selected;
         SoundManager.instance.PlayRandom(SoundTypes.menu);
         SceneManager.LoadScene(2);

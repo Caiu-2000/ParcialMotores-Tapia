@@ -1,4 +1,4 @@
-
+using System;
 using UnityEngine;
 
 
@@ -11,13 +11,29 @@ public static class SaveManager
         PlayerPrefs.SetString("Skins_Davo", GlobalData.GenerateString(GlobalData.SkinsDavo));
         PlayerPrefs.Save();
     }
+    public static void SaveStamina()
+    {
+        PlayerPrefs.SetInt("Stamina", GlobalData.Stamina);
+        PlayerPrefs.Save();
+    }
+    public static void SaveTime()
+    {
+        PlayerPrefs.SetString("lastTime", DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString());
+        PlayerPrefs.Save();
+    }
     public static int GetSavedMoney()
     {
         return PlayerPrefs.GetInt("Money", 0);
     }
 
-
-
+    public static int GetSavedStamina()
+    {
+        return PlayerPrefs.GetInt("Stamina", 100);
+    }
+    public static long GetTime()
+    {
+        return long.Parse(PlayerPrefs.GetString("lastTime", "0"));
+    }
     public static void DeleteData()
     {
         PlayerPrefs.DeleteAll();

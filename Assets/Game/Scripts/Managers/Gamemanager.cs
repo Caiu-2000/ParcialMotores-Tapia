@@ -62,7 +62,10 @@ public class Gamemanager : MonoBehaviour
         SaveManager.Save();
     }
 
-
+    private void Update()
+    {
+        StaminaManager.RechargeStamina();
+    }
 }
 
 
