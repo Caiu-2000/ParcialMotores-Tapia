@@ -66,7 +66,11 @@ public class EnemySpawner : MonoBehaviour
         if (kills >= killsToSpawnBoss && bossSpawned == false)
         {
             bossSpawned = true;
-            enemiesSpawned.Add(tapia.SpawnObject(spawnPositions[0].position, Quaternion.identity));
+            // Lo cambie un poco para que sse agregue tapia a la lista de enemigos chequeables para los bulletmanagers
+
+            var tapiains = tapia.SpawnObject(spawnPositions[0].position, Quaternion.identity);
+            enemiesSpawned.Add(tapiains);
+            RunManager.instance.enemies.Add(tapiains);
         }
       
     }

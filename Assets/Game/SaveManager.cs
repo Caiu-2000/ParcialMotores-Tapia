@@ -1,4 +1,4 @@
-using System;
+
 using UnityEngine;
 
 
@@ -7,8 +7,8 @@ public static class SaveManager
     public static void Save()
     {
         PlayerPrefs.SetInt("Money", GlobalData.CurrentMoney);
-        PlayerPrefs.SetString("Skins_Cobra", GlobalData.SkinsCobra);
-        PlayerPrefs.SetString("Skins_Davo", GlobalData.SkinsDavo);
+        //PlayerPrefs.SetString("Skins_Cobra", GlobalData.SkinsCobraSave);
+        PlayerPrefs.SetString("Skins_Davo", GlobalData.GenerateString(GlobalData.SkinsDavo));
         PlayerPrefs.Save();
     }
     public static int GetSavedMoney()
@@ -21,20 +21,17 @@ public static class SaveManager
     public static void DeleteData()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString($"Skins_{CharacterNames.Davo}", "10000");
+        PlayerPrefs.SetInt("Money", 0);
+
+
+        GlobalData.Load();
     }
 
     internal static string GetSavedSkins(CharacterNames character)
     {
-        return PlayerPrefs.GetString($"Skins_{character}", "100000");
+        string data = PlayerPrefs.GetString($"Skins_{character}", "10");
+        if (data == "VACIA") return "10000000";
+        return data;
     }
 }
-/*
- Como guardar skins
-
-Se hace un string con 0 y 1 
-0 es skin bloqueada
-1 es skin desbloqueada
-
-
- 
- */

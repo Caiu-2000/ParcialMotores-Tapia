@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee777850bfee254fafadb03c7664f3a, type: 3}
   m_Name: CobraBase
   m_EditorClassIdentifier: 
+  CharacterName: 0
+  SkinName: Cobra Base
+  SkinPrice: 0
   NormalSprite: {fileID: 6336898547476321363, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   BuffedSprite: {fileID: -4232531709621455174, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   InvincibleSprite: {fileID: 3143922356029946234, guid: 174ad949b0413f04483e812e8017b74f, type: 3}

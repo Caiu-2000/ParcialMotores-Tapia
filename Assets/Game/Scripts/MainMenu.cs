@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject Selection;
     [SerializeField] GameObject Comic;
     [SerializeField] GameObject Credits;
-
+    [SerializeField] StoreManager Store; 
     private void Start()
     {
         GoMenu();
@@ -51,11 +51,18 @@ public class MainMenu : MonoBehaviour
         
 
     }
+    public void GoStore()
+    {
+        HideAll();
+        Store.gameObject.SetActive(true);
+        Store.LoadStore();
+    }
     public void HideAll()
     {
         Selection.SetActive(false);
         Menu.SetActive(false);
         Comic.SetActive(false);
         Credits.SetActive(false);
+        Store.gameObject.SetActive(false);
     }
 }

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee777850bfee254fafadb03c7664f3a, type: 3}
   m_Name: Davo500pesos
   m_EditorClassIdentifier: Assembly-CSharp::Skinset
-  NormalSprite: {fileID: 21300000, guid: 5c777e5392b169b409515c08c36a043d, type: 3}
-  BuffedSprite: {fileID: 6296696256446775703, guid: aca6a2f765b0d48439039120cfd47f11, type: 3}
-  InvincibleSprite: {fileID: -373464091, guid: 4bab1bee9a7b84943a241b07e478dea8, type: 3}
+  CharacterName: 1
+  SkinName: Davo Prime
+  SkinPrice: 250
+  NormalSprite: {fileID: 2013154338580200501, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
+  BuffedSprite: {fileID: 8518597450463865477, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
+  InvincibleSprite: {fileID: -7108111839779845278, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
+  SkinIndex: 1
