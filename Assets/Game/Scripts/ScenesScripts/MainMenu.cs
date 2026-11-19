@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PressedPlay()
     {
-       
+        if (GlobalData.Stamina < 20) return;
         if (!ComicReaded)
         {
             ComicReaded = true;
