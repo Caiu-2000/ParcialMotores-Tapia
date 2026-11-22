@@ -32,12 +32,13 @@ public class LevelPlayAdService : MonoBehaviour, IAdService
         rewardedAd.OnAdDisplayFailed += OnAdDisplayFailed;
         rewardedAd.OnAdLoadFailed += OnAdLoadFailed;
         rewardedAd.LoadAd();
+        Debug.Log("intialized?");
     }
     public void ShowRewardedAd(Action<bool> onResult)
     {
         if(rewardedAd == null || !rewardedAd.IsAdReady())
         {
-            onResult.Invoke(false);
+            onResult?.Invoke(false);
             return;
         }
         pendingCallback = onResult;
