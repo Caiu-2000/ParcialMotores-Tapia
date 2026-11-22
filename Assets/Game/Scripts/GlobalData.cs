@@ -85,11 +85,15 @@ public static class GlobalData
     {
         Stamina = Mathf.Clamp(Stamina + amount, 0, 100);
         Debug.Log($"Current Stamina: {Stamina}");
+        EventManager<GameEvent>.Publish<int>(GameEvent.StammUpdated, Stamina);
+
     }
     public static void RemoveStamina(int amount)
     {
         Stamina = Mathf.Clamp(Stamina - amount, 0, 100);
         Debug.Log($"Current Stamina: {Stamina}");
+        EventManager<GameEvent>.Publish<int>(GameEvent.StammUpdated, Stamina);
+
     }
 }
 

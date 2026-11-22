@@ -18,7 +18,8 @@ public enum GameEvent
     GamePaused,
     GameResumed,
    
-    MoneyChanged
+    MoneyChanged,
+    StammUpdated
 }
 
 // En caso de agregar una pausa iria aca 
