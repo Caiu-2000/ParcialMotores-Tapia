@@ -39,9 +39,7 @@ public abstract class Pool <T> where T : Component , IPoolable
     }
     public virtual void ReturnPoolable(T obj)
     {
-        Debug.Log("Se llamo ReturnPoolable  " + obj.gameObject.activeSelf);
         obj.gameObject.SetActive(false);
-        Debug.Log("Se desactivo " + obj.gameObject.activeSelf);
         poolStack.Push(obj);
         
     }
@@ -68,7 +66,6 @@ public class BulletPool : Pool<Bullet>
         {
             
             Bullet bullet = poolStack.Pop();
-            Debug.Log("Se llamo destruir  " + bullet.name);
 
 
             UnityEngine.Object.Destroy(bullet.gameObject);

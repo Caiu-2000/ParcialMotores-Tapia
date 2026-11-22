@@ -18,3 +18,5 @@ MonoBehaviour:
   NormalSprite: {fileID: -5281111534082226694, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   BuffedSprite: {fileID: 3553923059935295675, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   InvincibleSprite: {fileID: -7763791963650088171, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  SkinIndex: 0
+  IsBaseSkin: 1

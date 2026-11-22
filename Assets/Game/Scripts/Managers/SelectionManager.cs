@@ -82,6 +82,10 @@ public class SelectionManager : MonoBehaviour
 
     public void PlayPressed()
     {
+        GlobalData.SelectedCharacter = selected;
+
+        menu.GoSkinSelection();
+        return;
         GlobalData.RemoveStamina(20);
         SaveManager.SaveStamina();
         GlobalData.SelectedCharacter = selected;

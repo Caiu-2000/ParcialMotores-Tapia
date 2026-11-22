@@ -22,7 +22,6 @@ public class MoneyCounter : MonoBehaviour
 
     private void OnMoneyChanged(int newMoney)
     {
-        print(newMoney);
         text.text = "Money: " + newMoney.ToString();
     }
 }

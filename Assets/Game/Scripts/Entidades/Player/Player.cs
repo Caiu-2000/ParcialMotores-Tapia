@@ -41,7 +41,7 @@ public class Player : Entity
     public bool Buffed { private set; get; } = false;
     public bool invincible { private set; get; } = false;
 
-    [SerializeField] protected Sprite BulletSprite;
+    [SerializeField] public Sprite BulletSprite;
     [SerializeField] protected Sprite SpecialBulletSprite;
 
 
@@ -74,7 +74,7 @@ public class Player : Entity
         RunManager.instance.PlayerReady(this);
 
 
-        currentSet  = CharacterData.Skins[GlobalData.CurrentCharacterSkinIndex];
+        currentSet  = GlobalData.CurrentSkin;
         characterRenderer.sprite = currentSet.NormalSprite;
 
 

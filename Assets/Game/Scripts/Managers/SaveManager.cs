@@ -7,7 +7,7 @@ public static class SaveManager
     public static void Save()
     {
         PlayerPrefs.SetInt("Money", GlobalData.CurrentMoney);
-        //PlayerPrefs.SetString("Skins_Cobra", GlobalData.SkinsCobraSave);
+        PlayerPrefs.SetString("Skins_Cobra", GlobalData.GenerateString(GlobalData.SkinsCobra));
         PlayerPrefs.SetString("Skins_Davo", GlobalData.GenerateString(GlobalData.SkinsDavo));
         PlayerPrefs.Save();
     }
@@ -38,6 +38,8 @@ public static class SaveManager
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetString($"Skins_{CharacterNames.Davo}", "10000");
+        PlayerPrefs.SetString($"Skins_{CharacterNames.Cobra}", "10000");
+
         PlayerPrefs.SetInt("Money", 0);
 
 
@@ -49,5 +51,18 @@ public static class SaveManager
         string data = PlayerPrefs.GetString($"Skins_{character}", "10");
         if (data == "VACIA") return "10000000";
         return data;
+    }
+
+    public static bool IsSkinUnlocked(Skinset set , int index)
+    {
+        if (set.CharacterName == CharacterNames.Davo)
+        {
+            return GlobalData.SkinsDavo[index]; 
+        }
+        else if (set.CharacterName == CharacterNames.Cobra)
+        {
+            return GlobalData.SkinsCobra[index];
+        }
+        return false;
     }
 }

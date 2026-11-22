@@ -15,4 +15,6 @@ public class Skinset : ScriptableObject
     public Sprite InvincibleSprite;
 
     public int SkinIndex;
+
+    public bool IsBaseSkin = false;
 }
