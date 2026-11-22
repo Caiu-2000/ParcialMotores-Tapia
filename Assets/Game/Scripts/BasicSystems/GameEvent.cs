@@ -8,6 +8,7 @@ public enum GameEvent
 
     EnemyKilled, 
     BossProgress,
+    MidBossKilled,
 
     DamagePlayer,
     
