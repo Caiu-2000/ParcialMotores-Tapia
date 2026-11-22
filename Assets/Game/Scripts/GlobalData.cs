@@ -8,13 +8,14 @@ using UnityEngine;
 public static class GlobalData
 {
 
-    public static int CurrentCharacterSkinIndex { get; set; } = 0;
+    public static Skinset CurrentSkin;
     public static int CurrentMoney { get; set; } = 0;
     public static int Stamina { get; set; } = 100;
 
   
 
     public static List<bool> SkinsDavo = new List<bool>();
+    public static List<bool> SkinsCobra = new List<bool>();
     public static Dificltys CurrentDificulty = Dificltys.EASY;
     public static CharacterNames SelectedCharacter;
 
@@ -25,7 +26,7 @@ public static class GlobalData
         SkinsDavo.Clear();
         CurrentMoney = SaveManager.GetSavedMoney();
         Stamina = SaveManager.GetSavedStamina();
-        // SkinsCobraSave = SaveManager.GetSavedSkins(CharacterNames.Cobra);
+        SkinsCobra = GenerateSkinList(SaveManager.GetSavedSkins(CharacterNames.Cobra));
         IsLoaded = true;
         SkinsDavo = GenerateSkinList(SaveManager.GetSavedSkins(CharacterNames.Davo));
         Debug.Log("De la carga se recibio : " + SaveManager.GetSavedSkins(CharacterNames.Davo) + " Lista : " + SkinsDavo.Count);
@@ -34,7 +35,6 @@ public static class GlobalData
 
     private static List<bool> GenerateSkinList(string skinsSave)
     {
-        Debug.Log("Se cargo la lista con : " + skinsSave);
         List<bool> skinsList = new List<bool>() ;
         if (skinsSave == string.Empty) skinsSave = "10000000";
         foreach (char c in skinsSave)

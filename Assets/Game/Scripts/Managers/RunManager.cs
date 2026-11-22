@@ -78,7 +78,7 @@ public class RunManager : MonoBehaviour
 
     public  void PlayerReady(Player player)
     {
-        EnemyBulletManager = new BulletManager(500, player);
+        EnemyBulletManager = new BulletManager(200, player);
         EventManager<CombatEvents>.Subscribe<Bullet>(CombatEvents.EnemyFired, EnemyBulletManager.AddToList);
     }
 }

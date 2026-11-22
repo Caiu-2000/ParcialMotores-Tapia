@@ -47,3 +47,4 @@ MonoBehaviour:
   player: {fileID: 0}
   BulletCuantity: 25
   TimeBetween: 0.02
+  buletprefab: {fileID: 6615566956458720108, guid: 5e0100fb9bf0e7b4cb7f61f0d04d8e1b, type: 3}

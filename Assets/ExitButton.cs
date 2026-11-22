@@ -4,6 +4,6 @@ public class ExitButton : ButtonBase
 {
     public override void ClickedLogic()
     {
-        Application.Quit();
+        MainMenu.instance.ConfirmExit();
     }
 }

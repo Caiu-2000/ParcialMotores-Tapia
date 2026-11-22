@@ -19,3 +19,4 @@ MonoBehaviour:
   BuffedSprite: {fileID: 8518597450463865477, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
   InvincibleSprite: {fileID: -7108111839779845278, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
   SkinIndex: 1
+  IsBaseSkin: 0

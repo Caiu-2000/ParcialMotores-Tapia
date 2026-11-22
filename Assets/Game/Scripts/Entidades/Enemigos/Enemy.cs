@@ -66,6 +66,7 @@ public class Enemy : Entity, ISpawnable
     public override void Die()
     {
         EventManager<GameEvent>.Publish<int>(GameEvent.AddPoints, scoreValue);
+        GlobalData.Addmoney((int)(scoreValue * 0.75f));
         EventManager<GameEvent>.Publish<Enemy>(GameEvent.EnemyKilled, this);
         SoundManager.instance.PlayPitched(SoundTypes.EnemyDead);
         if (isBoss) EventManager<GameEvent>.Publish(GameEvent.MidBossKilled, this);

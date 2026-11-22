@@ -15,12 +15,13 @@ public class StoreManager : MonoBehaviour
 
     public bool TryBuyThis(Skinset skin)
     {
+        print("Se intenta comprar");
         if (GlobalData.CurrentMoney >= skin.SkinPrice)
         {
-            GlobalData.CurrentMoney -= skin.SkinPrice;
-            EventManager<GameEvent>.Publish(GameEvent.MoneyChanged, GlobalData.CurrentMoney);
+            GlobalData.RemoveMoney(skin.SkinPrice);
             if (skin.CharacterName == CharacterNames.Davo)
             {
+                print(skin.SkinIndex);
                 GlobalData.SkinsDavo[skin.SkinIndex] = true;
             }
             return true;
@@ -49,7 +50,6 @@ public class StoreManager : MonoBehaviour
         foreach (Skinset skin in SkinsDavo)
         {
             var item = Instantiate(ItemPrefab, ItemsHolder.transform);
-            skin.SkinIndex = aux;
             item.Init(skin, this);
             aux++;
         }

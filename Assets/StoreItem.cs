@@ -24,7 +24,6 @@ public class StoreItem : MonoBehaviour
         {
             
          
-            Debug.Log("El indice es : " + skin.SkinIndex + " El conteo de lista es : " + GlobalData.SkinsDavo.Count);
             if (GlobalData.SkinsDavo[skin.SkinIndex])
             {
                 Price.text = "Comprado";
@@ -43,6 +42,7 @@ public class StoreItem : MonoBehaviour
 
     public void BuyPressed()
     {
+        print("Se toco el boton");
        if (storeManager.TryBuyThis(set))
         {
             Price.text = "Comprado";

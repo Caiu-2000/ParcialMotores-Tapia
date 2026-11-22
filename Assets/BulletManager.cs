@@ -49,9 +49,11 @@ public class BulletManager : IUpdatable
     }
     public void AddToList(Bullet bullet)
     {
- 
         Bullets[BulletCount + 1] = bullet;
         BulletCount++;
+
+        Debug.Log("bala added : " + bullet + BulletCount);
+
         bullet.TimeLimit = Time.time + bullet.lifeTime;
     }
 

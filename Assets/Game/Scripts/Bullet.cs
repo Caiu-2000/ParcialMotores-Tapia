@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour , IPoolable
 {
-
+    [SerializeField] SpriteRenderer bulletsprite;
     protected Entity who;
     protected System.Action<IPoolable> returnAction;
 
@@ -31,7 +31,9 @@ public class Bullet : MonoBehaviour , IPoolable
     public void RestartBullet(Entity who , Sprite setSprite = null)
     {
         this.who = who;
-   
+        bulletsprite.sprite = setSprite;
+
+
     }
 
     public void ReturnToPool(Action<IPoolable> returnaction)
