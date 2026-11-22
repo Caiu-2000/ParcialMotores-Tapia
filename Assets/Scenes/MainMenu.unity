@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37950195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37950196}
+  - component: {fileID: 37950197}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37950196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37950195}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 313.11896, y: 1000.80225, z: 2.0301833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37950197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37950195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d62d6c842697c1418fe1be123b01baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameId: 29c8c0d7d
 --- !u!224 &486958072 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3981294524613632023, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
@@ -737,7 +782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1880861368}
   - component: {fileID: 1880861366}
-  - component: {fileID: 1880861367}
   m_Layer: 0
   m_Name: AdTest
   m_TagString: Untagged
@@ -757,20 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ff7d971d1e94148984965d759809ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardedAdUnitId: BP_Rewarded_Android
---- !u!114 &1880861367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880861365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d62d6c842697c1418fe1be123b01baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameId: 800445730
+  rewardedAdUnitId: zud2p9rhtfq49kpk
 --- !u!4 &1880861368
 Transform:
   m_ObjectHideFlags: 0
@@ -1765,4 +1796,5 @@ SceneRoots:
   - {fileID: 5728570053127156303}
   - {fileID: 7385828907409102636}
   - {fileID: 2999112550211282884}
+  - {fileID: 37950196}
   - {fileID: 1880861368}

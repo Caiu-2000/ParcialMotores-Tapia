@@ -6,11 +6,12 @@ public class LaserAttack : AttackPatterns
     [SerializeField] float chargeTime = 1.5f;
     [SerializeField] float fireTime = 2f;
     float timer;
-    bool firing;
+    bool firing = false;
     
     bool FireLaser()
     {
         Boss boss = owner as Boss;
+        Debug.Log(boss);
         if (boss == null) return false;
         timer += 0.2f;
         if (firing == false)
@@ -31,6 +32,7 @@ public class LaserAttack : AttackPatterns
             Debug.Log("TurnOffTheLaser");
             boss.laserBeam.Deactivate();
             boss.SetIdleVisual();
+            timer = 0f;
             firing = false;
             return false;
         }

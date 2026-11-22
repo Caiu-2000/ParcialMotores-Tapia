@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15780710c15f1df4481f3ba0d4de9422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 0.5
   healtcomponent:
     MaxHealth: 50
     CdTime: 0
@@ -178,11 +179,10 @@ MonoBehaviour:
   scoreValue: 100
   attackPatterns:
   - {fileID: 11400000, guid: 38138422ca7edcd40be140e886b4b678, type: 2}
-  - {fileID: 11400000, guid: 9bd0c096012f8a84490c90a2655a1f80, type: 2}
   - {fileID: 11400000, guid: 4bcc9b8fcac5cc8478fbfd60b204fb22, type: 2}
-  - {fileID: 11400000, guid: 760c6303fd20dc74e9e01a0e9dfdf59c, type: 2}
-  - {fileID: 11400000, guid: 795acdfa4d2e74048ba0da7e98bc919e, type: 2}
   - {fileID: 11400000, guid: c91e2dae1b7ef814bab434d1237a3294, type: 2}
+  - {fileID: 11400000, guid: 760c6303fd20dc74e9e01a0e9dfdf59c, type: 2}
+  isBoss: 0
   bossRenderer: {fileID: 8596943313025442633}
   idleSprite: {fileID: 664199014549822800, guid: 058209e6975ed3e4781768affce3400b, type: 3}
   chargingSprite: {fileID: 7370547117168144535, guid: b809644781ada56488ed145ac5049191, type: 3}
@@ -277,7 +277,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6170163146897267222, guid: b809644781ada56488ed145ac5049191, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -11,6 +11,7 @@ public class LevelPlayInitializer : MonoBehaviour
     }
     private void Start()
     {
+        Debug.Log($"Calling Init, Key length{GameId?.Length}");
         LevelPlay.Init(GameId);
     }
     private void OnDestroy()

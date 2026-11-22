@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 [Serializable]
