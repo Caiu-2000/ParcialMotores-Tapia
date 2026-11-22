@@ -6,10 +6,7 @@ public class LaserBeam : MonoBehaviour
     [SerializeField] float tickRate = 0.3f;
     Entity owner;
     float tickTimer;
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
+
     public void Activate(Entity owner)
     {
         this.owner = owner;
