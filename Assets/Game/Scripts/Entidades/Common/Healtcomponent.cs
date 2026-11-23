@@ -9,7 +9,7 @@ public class Healtcomponent : IObservable<HealthData> , ITimable
     public delegate void Death();
 
     public Death onDead = delegate { };
-    protected List<IObserver<HealthData>> healtObservers = new();
+    protected List<IObserver<HealthData>> healtObservers = new List<IObserver<HealthData>>();
     [SerializeField] private int MaxHealth = 3;
     [SerializeField] private float CdTime = 0.0f;
     public int CurrentHealth;
