@@ -179,6 +179,8 @@ MonoBehaviour:
   attackPatterns:
   - {fileID: 11400000, guid: 795acdfa4d2e74048ba0da7e98bc919e, type: 2}
   - {fileID: 11400000, guid: 760c6303fd20dc74e9e01a0e9dfdf59c, type: 2}
+  bombPrefab: {fileID: 6331410364579398132, guid: 386c35872fc772d4d87cce8d7849593d, type: 3}
+  isBoss: 0
 --- !u!114 &8985239868204028261
 MonoBehaviour:
   m_ObjectHideFlags: 0
