@@ -538,11 +538,11 @@ MonoBehaviour:
   spawnPositions:
   - {fileID: 23877972}
   bullet: {fileID: 8373707314684792283, guid: 548b849cdbb04f5478a6ee62d2cbd5b9, type: 3}
-  spawnTimer: 7.5
-  minSpawnTimer: 1
-  secondsToReachMinSpawnTimer: 120
-  killsToSpawnBoss: 20
-  killsToSpawnMidBoss: 10
+  spawnTimer: 5
+  minSpawnTimer: 0.5
+  secondsToReachMinSpawnTimer: 40
+  killsToSpawnBoss: 35
+  killsToSpawnMidBoss: 20
 --- !u!4 &611758261
 Transform:
   m_ObjectHideFlags: 0

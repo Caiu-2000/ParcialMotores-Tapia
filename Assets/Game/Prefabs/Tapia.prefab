@@ -174,6 +174,7 @@ MonoBehaviour:
     MaxHealth: 50
     CdTime: 0
     CurrentHealth: 50
+  bulletSprite: {fileID: 9061361799525586821, guid: 058209e6975ed3e4781768affce3400b, type: 3}
   muzzlePos: {fileID: 539259543556317936}
   bulletPrefab: {fileID: 8373707314684792283, guid: 548b849cdbb04f5478a6ee62d2cbd5b9, type: 3}
   bulletPoolSize: 20
@@ -332,8 +333,8 @@ Transform:
   m_GameObject: {fileID: 9032153432901432459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.038424015, y: 0.009418383, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.038424015, y: 0.0094184, z: 0}
+  m_LocalScale: {x: 0.60225, y: 0.60225, z: 0.60225}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 539259543556317936}
