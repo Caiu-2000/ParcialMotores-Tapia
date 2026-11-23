@@ -6,6 +6,5 @@ public abstract class Bomb : MonoBehaviour
     protected RunManager manager;
     public abstract void Activate(); 
 
-
 }
 

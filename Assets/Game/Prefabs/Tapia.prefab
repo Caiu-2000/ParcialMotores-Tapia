@@ -182,6 +182,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4bcc9b8fcac5cc8478fbfd60b204fb22, type: 2}
   - {fileID: 11400000, guid: c91e2dae1b7ef814bab434d1237a3294, type: 2}
   - {fileID: 11400000, guid: 760c6303fd20dc74e9e01a0e9dfdf59c, type: 2}
+  bombPrefab: {fileID: 6331410364579398132, guid: 386c35872fc772d4d87cce8d7849593d, type: 3}
   isBoss: 0
   bossRenderer: {fileID: 8596943313025442633}
   idleSprite: {fileID: 664199014549822800, guid: 058209e6975ed3e4781768affce3400b, type: 3}

@@ -10,6 +10,7 @@ public class Enemy : Entity, ISpawnable
     [SerializeField] int bulletPoolSize = 20;
     [SerializeField] int scoreValue = 100;
     [SerializeField] List<AttackPatterns> attackPatterns = new List<AttackPatterns>();
+    [SerializeField] BuffCollectable bombPrefab;
     BulletPool bulletPool;
     BaseEnemyMovement enemyMovement;
     BaseEnemyAttack enemyAttack;
@@ -78,7 +79,7 @@ public class Enemy : Entity, ISpawnable
         // Esto hace un while que borra una por una las balas
         bulletPool.EmtpyPool();
 
-
+        RewardsOnDeath();
         base.Die();
     }
 
@@ -87,4 +88,12 @@ public class Enemy : Entity, ISpawnable
         EventManager<CombatEvents>.Publish(CombatEvents.EnemyFired, bullet);
     }
 
+    void RewardsOnDeath()
+    {
+        int random = Random.Range(0, 101);
+        if (random < 20 || isBoss)
+        {
+            Instantiate(bombPrefab,transform.position, Quaternion.identity);
+        }
+    }
 }
