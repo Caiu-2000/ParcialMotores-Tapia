@@ -6,6 +6,9 @@ using UnityEngine;
 public class Skinset : ScriptableObject
 {
     public CharacterNames CharacterName;
+
+    public Sprite SkinIcon;
+
     public string SkinName;
 
     public int SkinPrice;
