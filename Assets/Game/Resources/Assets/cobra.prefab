@@ -152,8 +152,8 @@ MonoBehaviour:
   size: 0.5
   healtcomponent:
     MaxHealth: 8
-    CdTime: 0.2
-    CurrentHealth: 3
+    CdTime: 0.75
+    CurrentHealth: 8
   CharacterData: {fileID: 11400000, guid: ec11a055a64670e4d80fbebdee793480, type: 2}
   speed: 4
   bulletPrefab: {fileID: 4776299521080751060, guid: be48837f9b3aa2f42ab7964abbf9f381, type: 3}

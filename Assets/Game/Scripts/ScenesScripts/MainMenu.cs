@@ -19,6 +19,7 @@ public class MainMenu : ExitReader
     protected override void Start()
     {
         instance = this;
+        Time.timeScale = 1.0f;
         base.Start();
         GoMenu();
     }
