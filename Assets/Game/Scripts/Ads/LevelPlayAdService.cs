@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using Unity.Services.LevelPlay;
-
+using System.Collections;
 public class LevelPlayAdService : MonoBehaviour, IAdService
 {
     [SerializeField] private string rewardedAdUnitId;
@@ -36,8 +36,10 @@ public class LevelPlayAdService : MonoBehaviour, IAdService
     }
     public void ShowRewardedAd(Action<bool> onResult)
     {
-        if(rewardedAd == null || !rewardedAd.IsAdReady())
+        Debug.Log($"timeScale = {Time.timeScale}");
+        if (rewardedAd == null || !rewardedAd.IsAdReady())
         {
+            Debug.Log($"Not ready. rewardedAd null? {rewardedAd == null}");
             onResult?.Invoke(false);
             return;
         }
@@ -47,13 +49,12 @@ public class LevelPlayAdService : MonoBehaviour, IAdService
     }
     void OnAdRewarded(LevelPlayAdInfo info, LevelPlayReward reward)
     {
+        Debug.Log("OnAdRewarded fired");
         rewardEarned = true;
     }
     void OnAdClosed(LevelPlayAdInfo info)
     {
-        pendingCallback?.Invoke(rewardEarned);
-        pendingCallback = null;
-        rewardedAd.LoadAd();
+        StartCoroutine(ReportResultAfterClose());
 
     }
     void OnAdDisplayFailed(LevelPlayAdInfo info, LevelPlayAdError error)
@@ -65,5 +66,14 @@ public class LevelPlayAdService : MonoBehaviour, IAdService
     void OnAdLoadFailed(LevelPlayAdError error)
     {
         Debug.Log($"Ad load failure: {error}");
+    }
+
+    IEnumerator ReportResultAfterClose()
+    {
+        yield return new WaitForSecondsRealtime(0.3f);
+
+        pendingCallback?.Invoke(rewardEarned);
+        pendingCallback = null;
+        rewardedAd.LoadAd();
     }
 }
