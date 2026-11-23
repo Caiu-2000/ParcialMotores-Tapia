@@ -90,7 +90,7 @@ public class Enemy : Entity, ISpawnable
     void RewardsOnDeath()
     {
         int random = Random.Range(0, 101);
-        if (random < 100)
+        if (random < 20 || isBoss)
         {
             Instantiate(bombPrefab,transform.position, Quaternion.identity);
         }
