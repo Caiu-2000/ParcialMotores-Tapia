@@ -15,6 +15,7 @@ public class stamUpdater : MonoBehaviour
 
     private void UpdateText(int obj)
     {
+        if (textStamina == null) return;
         textStamina.text = obj.ToString();
     }
 
