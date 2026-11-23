@@ -52,7 +52,6 @@ public class BulletManager : IUpdatable
         Bullets[BulletCount + 1] = bullet;
         BulletCount++;
 
-        Debug.Log("bala added : " + bullet + BulletCount);
 
         bullet.TimeLimit = Time.time + bullet.lifeTime;
     }

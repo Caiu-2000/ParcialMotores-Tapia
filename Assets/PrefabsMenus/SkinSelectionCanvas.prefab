@@ -170,10 +170,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 125
+    m_Top: 181
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 159.89
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -715,7 +715,7 @@ MonoBehaviour:
   characterSkins: []
   CharacterName: {fileID: 8306784672203511949}
   skinImage: {fileID: 1263178728633390902}
-  PlayButton: {fileID: 0}
+  PlayButton: {fileID: 5140898832740496638}
   menu: {fileID: 0}
 --- !u!223 &9151237635816170373
 Canvas:

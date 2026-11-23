@@ -92,8 +92,14 @@ public class SkinSelection : MonoBehaviour
             PlayButton.enabled = true;
 
         }
-
-        skinImage.sprite = characterSkins[index].NormalSprite;
+        if (characterSkins[index].SkinIcon != null)
+        {
+            skinImage.sprite = characterSkins[index].SkinIcon;
+        }
+        else
+        {
+            skinImage.sprite = characterSkins[index].NormalSprite;
+        }
         CharacterName.text = characterSkins[index].SkinName;
     }
 

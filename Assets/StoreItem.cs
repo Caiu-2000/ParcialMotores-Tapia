@@ -15,23 +15,44 @@ public class StoreItem : MonoBehaviour
 
     Skinset set;
     [SerializeField] Button BuyButton;
-    public int Skinindex = 0;
+
+    int cobraindex = 0;
+    int davoindex = 1;
+
+
     public void Init(Skinset skin , StoreManager manager)
     {
+        int Skinindex;
+
+        if (skin.CharacterName == CharacterNames.Cobra)
+        {
+            cobraindex++;
+            Skinindex = cobraindex;
+        }
+        else
+        {
+            davoindex++;
+            Skinindex = davoindex;
+        }
+
         storeManager = manager;
      
         SkinName.text = skin.SkinName;
         Price.text = skin.SkinPrice.ToString();
         
 
-            Skinindex = skin.SkinIndex;
             if (SaveManager.IsSkinUnlocked(skin, skin.SkinIndex))
             {
                 Price.text = "Comprado";
                 BuyButton.gameObject.SetActive(false);
             }
 
-        SkinImage.sprite = skin.NormalSprite;
+        if (skin.SkinIcon != null)
+        {
+            SkinImage.sprite = skin.SkinIcon;
+        }
+        else SkinImage.sprite = skin.NormalSprite;
+        
         set = skin;
     }
 
