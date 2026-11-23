@@ -37,8 +37,8 @@ public static class SaveManager
     public static void DeleteData()
     {
         PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetString($"Skins_{CharacterNames.Davo}", "10000");
-        PlayerPrefs.SetString($"Skins_{CharacterNames.Cobra}", "10000");
+        PlayerPrefs.SetString($"Skins_{CharacterNames.Davo}", "1000000000");
+        PlayerPrefs.SetString($"Skins_{CharacterNames.Cobra}", "100000000");
 
         PlayerPrefs.SetInt("Money", 0);
 
@@ -48,13 +48,15 @@ public static class SaveManager
 
     internal static string GetSavedSkins(CharacterNames character)
     {
-        string data = PlayerPrefs.GetString($"Skins_{character}", "10");
+
+        string data = PlayerPrefs.GetString($"Skins_{character}", "10000000");
         if (data == "VACIA") return "10000000";
         return data;
     }
 
     public static bool IsSkinUnlocked(Skinset set , int index)
     {
+        Debug.Log("Se intenta conseguir la skin de indice  : " + index + " Davo : " + GlobalData.SkinsDavo.Count);
         if (set.CharacterName == CharacterNames.Davo)
         {
             return GlobalData.SkinsDavo[index]; 

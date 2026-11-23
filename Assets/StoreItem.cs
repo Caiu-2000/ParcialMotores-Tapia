@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 
 using UnityEngine;
@@ -14,28 +15,22 @@ public class StoreItem : MonoBehaviour
 
     Skinset set;
     [SerializeField] Button BuyButton;
+    public int Skinindex = 0;
     public void Init(Skinset skin , StoreManager manager)
     {
         storeManager = manager;
      
         SkinName.text = skin.SkinName;
         Price.text = skin.SkinPrice.ToString();
-        if (skin.CharacterName == CharacterNames.Davo)
-        {
-            
-         
-            if (GlobalData.SkinsDavo[skin.SkinIndex])
+        
+
+            Skinindex = skin.SkinIndex;
+            if (SaveManager.IsSkinUnlocked(skin, skin.SkinIndex))
             {
                 Price.text = "Comprado";
                 BuyButton.gameObject.SetActive(false);
             }
 
-        }
-        else if (skin.CharacterName == CharacterNames.Cobra)
-        {
-            Debug.LogError("FALTA IMPLEMENTAR COBRA MONO");
-        }
-            
         SkinImage.sprite = skin.NormalSprite;
         set = skin;
     }

@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 
@@ -37,6 +38,7 @@ public static class GlobalData
     {
         List<bool> skinsList = new List<bool>() ;
         if (skinsSave == string.Empty) skinsSave = "10000000";
+        Debug.Log("Se cargan las skins de davo con : " +skinsSave);
         foreach (char c in skinsSave)
         {
             if (c == '1')
