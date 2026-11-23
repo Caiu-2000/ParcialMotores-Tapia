@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ee777850bfee254fafadb03c7664f3a, type: 3}
-  m_Name: Davo500pesos
+  m_Name: DAVORUTO
   m_EditorClassIdentifier: Assembly-CSharp::Skinset
   CharacterName: 1
-  SkinName: Davo Prime
+  SkinIcon: {fileID: -4411643532224552963, guid: 8b28c6d1bb53fc5469b422b36124f77a, type: 3}
+  SkinName: DAVORUTO
   SkinPrice: 250
   NormalSprite: {fileID: 2013154338580200501, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
   BuffedSprite: {fileID: 8518597450463865477, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}

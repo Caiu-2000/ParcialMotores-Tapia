@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - type: 8
-    soundClip: {fileID: 8300000, guid: 5d593232bd4886b4c8f73a5038cc67db, type: 3}
+  - type: 7
+    soundClip: {fileID: 8300000, guid: 2a44a02e8b37f2d49ac83187475b6a6d, type: 3}
     AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
     volume: 1
     pitch: 1
@@ -80,7 +80,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 296d70631364f644fbc319b7418c27f1, type: 3}
     - {fileID: 8300000, guid: 00e22015b0832d24eb4de65dd6058ff0, type: 3}
     AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
-    volume: 1
+    volume: 0.561
     Source: {fileID: 7584786389722464918}
   - type: 0
     soundClip:
