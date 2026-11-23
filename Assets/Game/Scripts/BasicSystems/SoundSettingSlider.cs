@@ -15,12 +15,14 @@ public class SoundSettingSlider : MonoBehaviour
     public string mixerGroup;
     [SerializeField] private AudioMixerGroup _AudioMixerG;
     private SoundManager SoundM;
-
+    bool WasSFX = false;
     private void Start()
     {
         if(!SoundManager.instance) { print("Te olvidaste el manager"); }
         else
         {
+            if (mixerGroup == "SFX") WasSFX = true;
+
             SoundM = SoundManager.instance;
             mixerGroup = _AudioMixerG.name;
             if (!SoundM.mixerValue.ContainsKey(mixerGroup))
@@ -32,12 +34,20 @@ public class SoundSettingSlider : MonoBehaviour
     }
     public void SetVolume(float vol)
     {
-        _AudioMixerG.audioMixer.SetFloat(mixerGroup, Mathf.Log(vol) * 20f);
+        print(_AudioMixerG.audioMixer.outputAudioMixerGroup + "   " + mixerGroup);
+
+
+        if (WasSFX) _AudioMixerG.audioMixer.SetFloat("SFX", Mathf.Log(vol) * 20f);
+
+        else _AudioMixerG.audioMixer.SetFloat(mixerGroup, Mathf.Log(vol) * 20f);
     }
 
     public void SetVolumeValues()
     {
-        SoundM.mixerValue[mixerGroup] = slider.value;
+        float value = Mathf.Max(slider.value, 0.0001f);
+
+        SoundM.mixerValue[mixerGroup] = value;
+        SetVolume(value);
     }
     public void LoadVolumeValues()
     {
