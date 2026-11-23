@@ -66,6 +66,10 @@ public class Gamemanager : MonoBehaviour
     {
         StaminaManager.RechargeStamina();
     }
+    public static void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
 
 
