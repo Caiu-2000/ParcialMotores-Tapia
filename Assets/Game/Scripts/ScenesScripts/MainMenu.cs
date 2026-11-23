@@ -1,5 +1,3 @@
-using System;
-using UnityEditor;
 using UnityEngine;
 
 public class MainMenu : ExitReader
@@ -78,12 +76,13 @@ public class MainMenu : ExitReader
 
     public void ConfirmExit()
     {
-        //HideAll();
         ExitGame.SetActive(true);
     }
 
     public void HideAll()
     {
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
+
         Selection.SetActive(false);
         Menu.SetActive(false);
         Comic.SetActive(false);
@@ -98,12 +97,18 @@ public class MainMenu : ExitReader
 
     protected override void GoBackPressed()
     {
+        if (config.activeSelf)
+        {
+            config.SetActive(false);
+            return;
+        }
+
         ConfirmExit();
     }
 
     public void GoSettings()
     {
-        HideAll();
+
         config.SetActive(true);
     }
 }
