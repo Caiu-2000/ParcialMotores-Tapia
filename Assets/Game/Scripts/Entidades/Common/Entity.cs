@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour , IHittable
 {
     [SerializeField] protected float size = 0.5f;
     [SerializeField] protected Healtcomponent healtcomponent= new Healtcomponent();
-
+    public Sprite bulletSprite;
     public virtual void Die()
     {
         Destroy(gameObject);

@@ -20,7 +20,7 @@ public abstract class AttackPatterns : ScriptableObject, IShoot
         Bullet bullet = EnemySpawner.mainPool.GetPrefab();
         bullet.Spawned(muzzlePos.position);
         bullet.transform.up = dir;
-        bullet.RestartBullet(owner);
+        bullet.RestartBullet(owner, owner.bulletSprite);
 
 
         // Esto la agregue yo para que se llame bien el evento que suma la bala

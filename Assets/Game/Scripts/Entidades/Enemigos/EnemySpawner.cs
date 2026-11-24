@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     //-----------------Settings------------------//
     [SerializeField] float spawnTimer = 7.5f;
     [SerializeField] float minSpawnTimer = 2f;
-    [SerializeField, Range(60, 120)] float secondsToReachMinSpawnTimer = 120f;
+    [SerializeField, Range(30, 120)] float secondsToReachMinSpawnTimer = 120f;
     [SerializeField] int killsToSpawnBoss;
     [SerializeField] int killsToSpawnMidBoss; //GET THE REJUVENATOR
     //---------------Private vars--------------//
