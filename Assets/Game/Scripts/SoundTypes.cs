@@ -11,5 +11,9 @@ public enum SoundTypes
 
     Bomb,
     PowerUp,
-    EnemyDead
+    EnemyDead,
+
+
+    MenuMusic,
+    GameMusic
 }
