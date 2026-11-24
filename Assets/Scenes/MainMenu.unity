@@ -164,24 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameId: 29c8c0d7d
---- !u!1 &681930753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1595036677632666844, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-  m_PrefabInstance: {fileID: 2999112550211282884}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &681930758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681930753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cca6a5e1b042674e8c6554a52c6a1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sound: 0
 --- !u!1 &748330511
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,24 +618,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624828526}
   m_CullTransparentMesh: 1
---- !u!1 &1754149022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4843565248871428668, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-  m_PrefabInstance: {fileID: 2999112550211282884}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1754149028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754149022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cca6a5e1b042674e8c6554a52c6a1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sound: 15
 --- !u!1 &1816533052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,26 +1046,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4405075693517386475, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 262.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4405075693517386475, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 413
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843565248871428668, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_Name
-      value: Delete
-      objectReference: {fileID: 0}
     - target: {fileID: 5798458091358638430, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
       propertyPath: adServiceSource
       value: 
       objectReference: {fileID: 1880861366}
-    - target: {fileID: 6712761937289287813, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: Credits
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6873099736740957671, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1118,41 +1066,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_fontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: a6f3b005a5daf3f42b15116619cf3b49, type: 2}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: a6f3b005a5daf3f42b15116619cf3b49, type: 2}
-    - target: {fileID: 8354701283865299158, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 732503045019808115, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1595036677632666844, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 681930758}
-    - targetCorrespondingSourceObject: {fileID: 4843565248871428668, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1754149028}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
 --- !u!1001 &5728570053127156303
 PrefabInstance:

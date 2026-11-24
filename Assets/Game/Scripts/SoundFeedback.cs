@@ -12,6 +12,7 @@ public class SoundFeedback : MonoBehaviour
     }
     void Call()
     {
-        SoundManager.instance.PlayRandomPitch(Sound);
+        print("butooo");
+        SoundManager.instance.PlayPitched(Sound);
     }
 }
