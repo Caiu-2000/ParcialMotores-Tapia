@@ -1,7 +1,4 @@
-using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [DefaultExecutionOrder(10)]
@@ -34,6 +31,7 @@ public class RunManager : MonoBehaviour
         RunPoints = 0;
         RunTime = 0;
 
+        SoundManager.instance.ReplaceSound( SoundTypes.GameMusic, SoundTypes.MenuMusic);
 
         if (instance != null) Destroy(instance);
         instance = this;

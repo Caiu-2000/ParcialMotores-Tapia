@@ -1,5 +1,3 @@
-using System;
-using UnityEditor;
 using UnityEngine;
 
 public class MainMenu : ExitReader
@@ -22,6 +20,8 @@ public class MainMenu : ExitReader
         Time.timeScale = 1.0f;
         base.Start();
         GoMenu();
+        print("Aca esta ");
+        SoundManager.instance.ReplaceSound(SoundTypes.MenuMusic, SoundTypes.GameMusic);
     }
     public void PressedPlay()
     {
@@ -50,11 +50,7 @@ public class MainMenu : ExitReader
         Selection.SetActive(true);
         
     }
-    public void GoCredits()
-    {
-        HideAll();
-        Credits.SetActive(true);
-    }
+
     public void GoMenu()
     {
         HideAll();
@@ -78,16 +74,16 @@ public class MainMenu : ExitReader
 
     public void ConfirmExit()
     {
-        //HideAll();
         ExitGame.SetActive(true);
     }
 
     public void HideAll()
     {
+        SoundManager.instance.PlayRandom(SoundTypes.menu);
+
         Selection.SetActive(false);
         Menu.SetActive(false);
         Comic.SetActive(false);
-        Credits.SetActive(false);
         config.SetActive(false);
         ExitGame.SetActive(false);
         Store.gameObject.SetActive(false);
@@ -98,12 +94,18 @@ public class MainMenu : ExitReader
 
     protected override void GoBackPressed()
     {
+        if (config.activeSelf)
+        {
+            config.SetActive(false);
+            return;
+        }
+
         ConfirmExit();
     }
 
     public void GoSettings()
     {
-        HideAll();
+
         config.SetActive(true);
     }
 }

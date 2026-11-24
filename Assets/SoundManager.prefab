@@ -47,12 +47,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - type: 8
-    soundClip: {fileID: 8300000, guid: 5d593232bd4886b4c8f73a5038cc67db, type: 3}
+  - type: 7
+    soundClip: {fileID: 8300000, guid: 2a44a02e8b37f2d49ac83187475b6a6d, type: 3}
     AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
     volume: 1
     pitch: 1
     Source: {fileID: 0}
+  - type: 9
+    soundClip: {fileID: 8300000, guid: a85f33e35b0856d408bfeff4f3e80556, type: 3}
+    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
+  - type: 10
+    soundClip: {fileID: 8300000, guid: 2b3b007577d339c42b7950ef59054708, type: 3}
+    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
+  - type: 10
+    soundClip: {fileID: 8300000, guid: 2b3b007577d339c42b7950ef59054708, type: 3}
+    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
+  - type: 14
+    soundClip: {fileID: 8300000, guid: 44e6fb4be31b8114e83acf7946d30b10, type: 3}
+    AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
+  - type: 15
+    soundClip: {fileID: 8300000, guid: 7a125fa5135cb96478d7373cc989c76a, type: 3}
+    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 0.5
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
   albums:
   - type: 4
     soundClip:
@@ -80,7 +110,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 296d70631364f644fbc319b7418c27f1, type: 3}
     - {fileID: 8300000, guid: 00e22015b0832d24eb4de65dd6058ff0, type: 3}
     AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
-    volume: 1
+    volume: 0.561
     Source: {fileID: 7584786389722464918}
   - type: 0
     soundClip:
@@ -89,8 +119,16 @@ MonoBehaviour:
     AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
     volume: 1
     Source: {fileID: 7584786389722464918}
+  - type: 16
+    soundClip:
+    - {fileID: 8300000, guid: ac45bdd3247e4a943955dd2b2989dce6, type: 3}
+    - {fileID: 8300000, guid: 351b27d00dfeba44282d7c6e73e093c3, type: 3}
+    AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    Source: {fileID: 7584786389722464918}
   AudioMixer:
   - {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+  - {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
 --- !u!82 &7584786389722464918
 AudioSource:
   m_ObjectHideFlags: 0

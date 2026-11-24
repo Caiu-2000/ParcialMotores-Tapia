@@ -31,6 +31,7 @@ public class Bullet : MonoBehaviour , IPoolable
     public void RestartBullet(Entity who , Sprite setSprite = null)
     {
         this.who = who;
+        if (setSprite != null)
         bulletsprite.sprite = setSprite;
 
 

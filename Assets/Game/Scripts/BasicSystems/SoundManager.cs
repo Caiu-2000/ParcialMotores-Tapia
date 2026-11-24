@@ -143,7 +143,12 @@ public  class SoundManager : MonoBehaviour
 
     }
 
-
+    public void ReplaceSound(SoundTypes coming , SoundTypes closing)
+    {
+        print("SE llamo replace");
+        Pause(closing);
+        Play(coming);
+    }
     private void Update()
     {
         this.transform.position = Camera.main.transform.position;

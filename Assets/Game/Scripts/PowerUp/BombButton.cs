@@ -10,7 +10,6 @@ public class BombButton : MonoBehaviour
     {
         if (inCD) return;
         StartCoroutine(cd());
-        print("ApretoBoton");
         EventManager<InputEvents>.Publish<int>(InputEvents.BombPressed, 0);
     }
 

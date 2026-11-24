@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 
 
@@ -52,7 +53,7 @@ public static class EventManager<TEvent>
         }
         else
         {
-            throw new InvalidOperationException("No se encontro  " + eventType.ToString());
+           Debug.LogError("No se encontro  " + eventType.ToString());
         }
     }
 }
