@@ -30,11 +30,11 @@ public class SkinSelection : MonoBehaviour
     internal void LoadSkins()
     {
         characterSkins.Clear();
-        characterSkins = new List<Skinset>();
         currentIndex = 0;
 
         Skinset[] skins = Resources.LoadAll<Skinset>(PathParaSkins);
-        print("Se llamo load con resultado de: " + skins.Length + ". Personaje seleccionado: " + GlobalData.SelectedCharacter);
+        
+        characterSkins = new List<Skinset>(skins.Length);
 
         foreach (Skinset skin in skins)
         {
@@ -42,6 +42,7 @@ public class SkinSelection : MonoBehaviour
 
             if (Skininstance.CharacterName == GlobalData.SelectedCharacter)
             {
+
                 if (Skininstance.IsBaseSkin)
                 {
                     characterSkins.Insert(0, Skininstance);
@@ -81,7 +82,7 @@ public class SkinSelection : MonoBehaviour
             Debug.LogError("SkinSelection no tiene asignado el campo skinImage.");
             return;
         }
-        if (!SaveManager.IsSkinUnlocked(characterSkins[index] , index))
+        if (!SaveManager.IsSkinUnlocked(characterSkins[index] , characterSkins[index].SkinIndex))
         {
             skinImage.color = new Color(0.15f, 0.15f, 0.15f);
             PlayButton.enabled = false;

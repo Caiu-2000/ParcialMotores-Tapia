@@ -111,7 +111,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4461531074777770356}
   - component: {fileID: 1154741518403820889}
-  - component: {fileID: -4149240846498598222}
   m_Layer: 0
   m_Name: Davo
   m_TagString: Untagged
@@ -149,11 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2fb11855806b64fb92ed71dd1cfcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0.5
+  size: 0.1
   healtcomponent:
     MaxHealth: 5
     CdTime: 0.2
     CurrentHealth: 3
+  bulletSprite: {fileID: 0}
   CharacterData: {fileID: 11400000, guid: cea94fdd8b1472844910f61c5568b1d1, type: 2}
   speed: 6
   bulletPrefab: {fileID: 6615566956458720108, guid: 5e0100fb9bf0e7b4cb7f61f0d04d8e1b, type: 3}
@@ -168,42 +168,6 @@ MonoBehaviour:
   FireTime: 0.2
   BulletSprite: {fileID: 4007348119030579523, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   SpecialBulletSprite: {fileID: -667575912, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
---- !u!58 &-4149240846498598222
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597669677795634972}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.14
 --- !u!1001 &291309945172430959
 PrefabInstance:
   m_ObjectHideFlags: 0
