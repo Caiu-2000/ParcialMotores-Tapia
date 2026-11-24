@@ -57,7 +57,6 @@ public class StoreItem : MonoBehaviour
 
     public void BuyPressed()
     {
-        print("Se toco el boton");
        if (storeManager.TryBuyThis(set))
         {
             Price.text = "Comprado";

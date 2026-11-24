@@ -17,6 +17,7 @@ public class BombFeedback : MonoBehaviour
     {
        
         StartCoroutine(Show());
+        SoundManager.instance.PlayRandom(SoundTypes.MemeBomb);
     }
         private IEnumerator Show()
     {

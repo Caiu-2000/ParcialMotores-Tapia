@@ -21,5 +21,8 @@ public enum SoundTypes
     MenuInteraction1,
     MenuInteraction2,
     MenuInteraction3,
-    BuyElement
+    BuyElement,
+    Advertencia,
+    MemeBomb
+
 }
