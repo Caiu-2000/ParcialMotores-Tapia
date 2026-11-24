@@ -56,7 +56,6 @@ public static class SaveManager
 
     public static bool IsSkinUnlocked(Skinset set , int index)
     {
-        Debug.Log("Se intenta conseguir la skin de indice  : " + index + " Davo : " + GlobalData.SkinsDavo.Count);
         if (set.CharacterName == CharacterNames.Davo)
         {
             return GlobalData.SkinsDavo[index]; 

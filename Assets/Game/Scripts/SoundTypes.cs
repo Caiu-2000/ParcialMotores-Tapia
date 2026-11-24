@@ -15,5 +15,11 @@ public enum SoundTypes
 
 
     MenuMusic,
-    GameMusic
+    GameMusic,
+
+
+    MenuInteraction1,
+    MenuInteraction2,
+    MenuInteraction3,
+    BuyElement
 }

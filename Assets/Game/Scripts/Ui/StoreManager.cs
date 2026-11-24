@@ -11,20 +11,21 @@ public class StoreManager : MonoBehaviour
 
     public bool TryBuyThis(Skinset skin)
     {
-        print("Se intenta comprar");
         if (GlobalData.CurrentMoney >= skin.SkinPrice)
         {
             GlobalData.RemoveMoney(skin.SkinPrice);
             if (skin.CharacterName == CharacterNames.Davo)
             {
-                print(skin.SkinIndex);
                 GlobalData.SkinsDavo[skin.SkinIndex] = true;
+            }
+            else if (skin.CharacterName == CharacterNames.Cobra)
+            {
+                GlobalData.SkinsCobra[skin.SkinIndex] = true;
             }
             return true;
         }
         else
         {
-            Debug.Log("Not enough money");
             return false;
         }
     }
@@ -32,12 +33,12 @@ public class StoreManager : MonoBehaviour
 
     private void WipeStore()
     {
-        /*
-        foreach (Transform child in ItemsHolder.transform)
+        
+        foreach (Transform child in Content.transform)
         {
-            if (child.gameObject == margin) continue;
+           
             Destroy(child.gameObject);
-        }*/
+        }
     }
     public void LoadStore()
     {

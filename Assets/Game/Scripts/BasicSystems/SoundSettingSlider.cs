@@ -34,7 +34,6 @@ public class SoundSettingSlider : MonoBehaviour
     }
     public void SetVolume(float vol)
     {
-        print(_AudioMixerG.audioMixer.outputAudioMixerGroup + "   " + mixerGroup);
 
 
         if (WasSFX) _AudioMixerG.audioMixer.SetFloat("SFX", Mathf.Log(vol) * 20f);

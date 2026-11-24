@@ -50,11 +50,7 @@ public class MainMenu : ExitReader
         Selection.SetActive(true);
         
     }
-    public void GoCredits()
-    {
-        HideAll();
-        Credits.SetActive(true);
-    }
+
     public void GoMenu()
     {
         HideAll();
@@ -88,7 +84,6 @@ public class MainMenu : ExitReader
         Selection.SetActive(false);
         Menu.SetActive(false);
         Comic.SetActive(false);
-        Credits.SetActive(false);
         config.SetActive(false);
         ExitGame.SetActive(false);
         Store.gameObject.SetActive(false);
