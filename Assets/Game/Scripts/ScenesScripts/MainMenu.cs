@@ -20,6 +20,8 @@ public class MainMenu : ExitReader
         Time.timeScale = 1.0f;
         base.Start();
         GoMenu();
+        print("Aca esta ");
+        SoundManager.instance.ReplaceSound(SoundTypes.MenuMusic, SoundTypes.GameMusic);
     }
     public void PressedPlay()
     {
