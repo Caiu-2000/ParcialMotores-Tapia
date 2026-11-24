@@ -18,6 +18,7 @@ MonoBehaviour:
   SkinPrice: 250
   NormalSprite: {fileID: 215944101813373603, guid: ca18e4bac0ac7af41826ac1a743b86dd, type: 3}
   BuffedSprite: {fileID: -3140639988649097680, guid: ca18e4bac0ac7af41826ac1a743b86dd, type: 3}
-  InvincibleSprite: {fileID: -7108111839779845278, guid: 4eb6ddf324dada04f9ebaae2965c225f, type: 3}
+  InvincibleSprite: {fileID: -3140639988649097680, guid: ca18e4bac0ac7af41826ac1a743b86dd, type: 3}
   SkinIndex: 1
   IsBaseSkin: 0
+  SkinMusic: 10

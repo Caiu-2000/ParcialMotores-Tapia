@@ -6,7 +6,6 @@ public class MainMenu : ExitReader
     [SerializeField] GameObject Menu;
     [SerializeField] GameObject Selection;
     [SerializeField] GameObject Comic;
-    [SerializeField] GameObject Credits;
     [SerializeField] StoreManager Store;
 
     [SerializeField] SkinSelection skinSelection;
@@ -22,6 +21,7 @@ public class MainMenu : ExitReader
         GoMenu();
         print("Aca esta ");
         SoundManager.instance.ReplaceSound(SoundTypes.MenuMusic, SoundTypes.GameMusic);
+        SoundManager.instance.Pause(SoundTypes.OHHHJANEEEE);
     }
     public void PressedPlay()
     {

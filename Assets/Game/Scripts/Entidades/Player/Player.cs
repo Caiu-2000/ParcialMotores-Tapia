@@ -43,7 +43,8 @@ public class Player : Entity
 
     [SerializeField] public Sprite BulletSprite;
     [SerializeField] protected Sprite SpecialBulletSprite;
-
+    [SerializeField] protected float Buffduration = 5.0f;
+    [SerializeField] protected float invivncibilityDuration = 2.0f;
 
     Skinset currentSet;
 
@@ -118,7 +119,7 @@ public class Player : Entity
     public void BuffPlayer(float buffDuration = 2.0f)
     {
         SoundManager.instance.PlayPitched(SoundTypes.PowerUp);
-        StartCoroutine(BuffRoutine(buffDuration));
+        StartCoroutine(BuffRoutine(Buffduration));
     }
     private IEnumerator BuffRoutine(float Bufftime)
     {
@@ -129,7 +130,7 @@ public class Player : Entity
     private IEnumerator InvincibleTime(float time)
     {
         invincible = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(invivncibilityDuration);
         invincible = false;
     }
 
