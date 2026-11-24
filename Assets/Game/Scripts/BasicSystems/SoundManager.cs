@@ -1,5 +1,6 @@
 
 
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -59,7 +60,7 @@ public  class SoundManager : MonoBehaviour
         Sound sound = FindSound(name);
 
         if (sound == null) return;
-        
+        print("Se encontro el sonido de :  " + name);
         sound.Source.loop = loop;
         sound.Source.Play();
     }
@@ -69,6 +70,7 @@ public  class SoundManager : MonoBehaviour
         Sound sound = FindSound(name);
 
         if (sound == null) return;
+        print("Se encontro el sonido para pitchear de :  " + name);
 
         sound.Source.loop = loop;
         sound.Source.pitch = Random.Range(-0.5f, 3.0f);
@@ -147,7 +149,7 @@ public  class SoundManager : MonoBehaviour
     {
         print("SE llamo replace");
         Pause(closing);
-        Play(coming);
+        Play(coming , true);
     }
     private void Update()
     {
