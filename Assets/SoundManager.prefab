@@ -79,12 +79,18 @@ MonoBehaviour:
     Source: {fileID: 7584786389722464918}
   - type: 15
     soundClip: {fileID: 8300000, guid: 7a125fa5135cb96478d7373cc989c76a, type: 3}
-    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
-    volume: 0.5
+    AudioMixer: {fileID: -232216303193779925, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
     pitch: 1
     Source: {fileID: 7584786389722464918}
   - type: 15
     soundClip: {fileID: 8300000, guid: 7a125fa5135cb96478d7373cc989c76a, type: 3}
+    AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
+    volume: 1
+    pitch: 1
+    Source: {fileID: 7584786389722464918}
+  - type: 17
+    soundClip: {fileID: 8300000, guid: 023b346168821fb4c9c5a93dc17e7d6d, type: 3}
     AudioMixer: {fileID: -8889238404151136307, guid: 5c8acecb3092ebb4a82bb5f734af8fde, type: 2}
     volume: 1
     pitch: 1

@@ -20,4 +20,8 @@ public class Skinset : ScriptableObject
     public int SkinIndex;
 
     public bool IsBaseSkin = false;
+
+
+    public SoundTypes SkinMusic = SoundTypes.GameMusic;
+
 }

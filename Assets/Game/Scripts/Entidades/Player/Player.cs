@@ -164,6 +164,9 @@ public class Player : Entity
         Gamemanager.instance.PlayerDied();
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere( transform.position , size);
+    }
 
 }

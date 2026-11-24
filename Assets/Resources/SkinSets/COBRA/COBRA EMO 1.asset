@@ -16,8 +16,8 @@ MonoBehaviour:
   SkinIcon: {fileID: -5685110854723422511, guid: ce80d9c2b502c7b4990bf08a134d516e, type: 3}
   SkinName: YUTA COBRA
   SkinPrice: 100
-  NormalSprite: {fileID: 6336898547476321363, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
-  BuffedSprite: {fileID: -4232531709621455174, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
+  NormalSprite: {fileID: -4188199897722961435, guid: ca18e4bac0ac7af41826ac1a743b86dd, type: 3}
+  BuffedSprite: {fileID: 445602605301077070, guid: ca18e4bac0ac7af41826ac1a743b86dd, type: 3}
   InvincibleSprite: {fileID: 3143922356029946234, guid: 174ad949b0413f04483e812e8017b74f, type: 3}
   SkinIndex: 2
   IsBaseSkin: 0

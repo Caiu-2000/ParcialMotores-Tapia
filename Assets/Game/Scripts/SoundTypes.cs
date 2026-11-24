@@ -23,6 +23,8 @@ public enum SoundTypes
     MenuInteraction3,
     BuyElement,
     Advertencia,
-    MemeBomb
+    MemeBomb,
+
+    OHHHJANEEEE
 
 }
