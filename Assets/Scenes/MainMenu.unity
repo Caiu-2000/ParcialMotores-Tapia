@@ -896,6 +896,50 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1828937982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1828937984}
+  - component: {fileID: 1828937983}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1828937983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828937982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9bfa2ed0d5d554ebef617cea766e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1828937984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828937982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.189888, y: 1041.7467, z: -9.619058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880861365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1167,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1370232179889321427, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542143272164323996, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542143272164323996, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542143272164323996, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
+      propertyPath: m_OverridePixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542143272164323996, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2584781378446856408, guid: a8bbe9635106f3c41940789f38488d4f, type: 3}
@@ -1452,3 +1512,4 @@ SceneRoots:
   - {fileID: 966208015}
   - {fileID: 1047402672}
   - {fileID: 1624828527}
+  - {fileID: 1828937984}
