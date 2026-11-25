@@ -15,6 +15,8 @@ public class Gamemanager : MonoBehaviour
 
     public Player[] CharactersList = new Player[1];
 
+    public static EffectManager Effect;
+
     void Start()
     {
        
@@ -41,6 +43,7 @@ public class Gamemanager : MonoBehaviour
     }
     public static void GoMenu()
     {
+        Effect.ResetValues();
         SceneManager.LoadScene("MainMenu");     
     }
 

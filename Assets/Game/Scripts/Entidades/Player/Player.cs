@@ -2,6 +2,7 @@
 using System.Collections;
 
 using UnityEngine;
+using UnityEngine.XR;
 
 [DefaultExecutionOrder(15)]
 public class Player : Entity
@@ -143,8 +144,9 @@ public class Player : Entity
     public override void OnHit(DamageData data)
     {
         if (invincible) return;
+        if (healtcomponent.onCD) return;
+
         base.OnHit(data);
-    
         EventManager<GameEvent>.Publish<int>(GameEvent.DamagePlayer, healtcomponent.CurrentHealth);
     }
 
@@ -162,6 +164,8 @@ public class Player : Entity
 
     public void  deadHandling()
     {
+        EventManager<GameEvent>.Publish<int>(GameEvent.PlayerDied, 0);
+
         Gamemanager.instance.PlayerDied();
     }
 

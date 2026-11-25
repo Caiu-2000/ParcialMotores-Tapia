@@ -14,7 +14,7 @@ public class Healtcomponent : IObservable<HealthData> , ITimable
     [SerializeField] private float CdTime = 0.0f;
     public int CurrentHealth;
 
-    bool onCD = false;
+    public bool onCD = false;
 
     public Healtcomponent()
     {
