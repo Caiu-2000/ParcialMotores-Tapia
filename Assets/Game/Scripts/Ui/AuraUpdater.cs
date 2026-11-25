@@ -11,6 +11,6 @@ public class AuraUpdater : MonoBehaviour
 
     private void Start()
     {
-        text.text = "AURA TOTAL : " + RunManager.RunPoints.ToString(); 
+        text.text =  RunManager.RunPoints.ToString(); 
     }
 }

@@ -22,6 +22,8 @@ public class MainMenu : ExitReader
         print("Aca esta ");
         SoundManager.instance.ReplaceSound(SoundTypes.MenuMusic, SoundTypes.GameMusic);
         SoundManager.instance.Pause(SoundTypes.OHHHJANEEEE);
+        Shader.SetGlobalFloat("_HealtPercentage", 0.0f);
+
     }
     public void PressedPlay()
     {

@@ -19,7 +19,8 @@ public enum GameEvent
     GameResumed,
    
     MoneyChanged,
-    StammUpdated
+    StammUpdated,
+    PlayerDied
 }
 
 // En caso de agregar una pausa iria aca 

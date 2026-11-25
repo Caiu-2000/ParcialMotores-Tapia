@@ -42,7 +42,7 @@ public static class SaveManager
 
         PlayerPrefs.SetInt("Money", 0);
 
-
+        EventManager<GameEvent>.Publish<int>(GameEvent.MoneyChanged, 0);
         GlobalData.Load();
     }
 

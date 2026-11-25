@@ -4,6 +4,8 @@ using UnityEngine;
 public class MoneyCounter : MonoBehaviour
 {
     TextMeshProUGUI text = null;
+    [SerializeField]
+    string ExtraText = "Money : ";
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
@@ -22,6 +24,6 @@ public class MoneyCounter : MonoBehaviour
 
     private void OnMoneyChanged(int newMoney)
     {
-        text.text = "Money: " + newMoney.ToString();
+        text.text = ExtraText + newMoney.ToString();
     }
 }
