@@ -34,6 +34,11 @@ public class EnemySpawner : MonoBehaviour
     
     private void Awake()
     {
+        spawnTimer = GameConfig.SpawnTimer;
+        minSpawnTimer = GameConfig.MinSpawnTimer;
+        secondsToReachMinSpawnTimer = GameConfig.SecondsToReachMinSpawnTimer;
+        killsToSpawnBoss = GameConfig.KillsToSpawnBoss;
+        midBossSpawned = !GameConfig.MidBossEnabled;
         startInterval = spawnTimer;
         mainPool = new BulletPool(bullet, 500);
     }

@@ -17,7 +17,13 @@ public class RemoteConfigLoader : MonoBehaviour
                 await AuthenticationService.Instance.SignInAnonymouslyAsync();
             await RemoteConfigService.Instance.FetchConfigsAsync(new UserAttributes(), new AppAttributes());
             var cfg = RemoteConfigService.Instance.appConfig;
-            Debug.Log($"Remote config Ok -> health: {cfg.GetInt("defaultEnemyHealth", -1)}" + $"midBoss: {cfg.GetBool("midBossEnabled", false)}, spawnTimer: {cfg.GetFloat("spawnTimer", -1f)}");
+            GameConfig.DefaultEnemyHealth = cfg.GetInt("defaultEnemyHealth", GameConfig.DefaultEnemyHealth);
+            GameConfig.KillsToSpawnBoss = cfg.GetInt("killsToSpawnBoss", GameConfig.KillsToSpawnBoss);
+            GameConfig.MidBossEnabled = cfg.GetBool("midBossEnabled", GameConfig.MidBossEnabled);
+            GameConfig.MinSpawnTimer = cfg.GetFloat("minSpawnTimer", GameConfig.MinSpawnTimer);
+            GameConfig.SecondsToReachMinSpawnTimer = cfg.GetFloat("secondsToReachMinSpawnTimer", GameConfig.SecondsToReachMinSpawnTimer);
+            GameConfig.SpawnTimer = cfg.GetFloat("spawnTimer", GameConfig.SpawnTimer);
+            Debug.Log("Remote Config cargada en GameConfig");
         }
         catch (Exception e)
         {
