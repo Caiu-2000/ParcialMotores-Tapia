@@ -18,6 +18,7 @@ public class Healtcomponent : IObservable<HealthData> , ITimable
 
     public Healtcomponent()
     {
+        MaxHealth = GameConfig.DefaultEnemyHealth;
         CurrentHealth = MaxHealth;
     }
     public Healtcomponent(int maxHealth)
