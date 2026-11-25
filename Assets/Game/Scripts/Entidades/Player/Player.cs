@@ -169,5 +169,5 @@ public class Player : Entity
     {
         Gizmos.DrawWireSphere( transform.position , size);
     }
-
+    
 }
